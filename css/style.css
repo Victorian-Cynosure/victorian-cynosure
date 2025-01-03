@@ -937,7 +937,7 @@ tr:not(:first-child):nth-child(even){
   display: flex;
   min-height: 500px;
   height: 700px;
-  background-image: url(/images/backpic.jpg);
+  background-image: url(/victorian-cynosure/images/backpic.jpg);
   background-size: cover;
   border-radius: 30px;
 }
