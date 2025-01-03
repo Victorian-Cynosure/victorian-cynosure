@@ -66,7 +66,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '../json/instagram.json'
+      path: '/victorian-cynosure/json/instagram.json'
   });
   animation.addEventListener('DOMLoaded', () => {
     const svgElement = animationContainer.querySelector('svg');
@@ -90,7 +90,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '../json/youtube-2.json'
+      path: '/victorian-cynosure/json/youtube-2.json'
   });
   youtubeanimation.addEventListener('DOMLoaded', () => {
     const svgElement = youtubeContainer.querySelector('svg');
@@ -125,7 +125,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '../json/playPause.json'
+      path: '/victorian-cynosure/json/playPause.json'
   });
   musicanimation.addEventListener('DOMLoaded', () => {
     const svgElement = musicContainer.querySelector('svg');
