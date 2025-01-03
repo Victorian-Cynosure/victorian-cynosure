@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自主學習成發</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chango&family=Potta+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a3471e79bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar bg-yellow" id="nav">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/logo.png" alt="" class="logo-img">
+                <div class="control-music">
+                    <div class="information">
+                        <div class="music-animation" id="music-animation"></div>
+                        <h1>song name</h1>
+                    </div>
+                    <div class="timebar">
+                        <audio id="song">
+                            <source src="../media/Piano cover 3.m4a" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+                    </div>
+                </div>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <a href="index.html#nav" class="dropbtn">首頁</a>
+                            <div class="dropdown-content">
+                                <a href="index.html#background">背景介紹</a>
+                                <a href="index.html#timeline">時程表</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="index2.html#nav" class="dropbtn">表演者名單</a>
+                            <div class="dropdown-content">
+                                <a href="index2.html#perform">報告組名單</a>
+                                <a href="index2.html#stall">攤位組名單</a>
+                                <a href="#timetable">海報組名單</a>
+                                <a href="index2.html#staff">工作人員名單</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="instagram-animation" class="instagram-animation">
+                            <a href="https://www.instagram.com/victorian_cynosure/"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="youtube-animation" class="youtube-animation">
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"></a>
+                        </div>
+                    </li>
+                    <li class="search-item">
+                        <div class="search">
+                            <dotlottie-player id="search-icon" class="search-icon"
+                                src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie"
+                                background="transparent" speed="1"></dotlottie-player>
+                            <input class="search_input" type="text" placeholder="search...">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="text-container" id="perform">報告組名單</div>
+    <div class="slider-container" >
+        <div class="slider1">
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        Arduino x 單擺
+                    </h1>
+                    <p>
+                        重力加速度g是物理上常用的數值，然而其大小卻因地點不同而有些微差異，因此測量出相對準確的g值在實驗上非常重要。此專題將帶領你體驗物理學與微處理機所碰撞出的新火花。透過結合Arduino相關元件以及單擺的物理特性，一同打造出一個能隨時隨地測量重力加速度的裝置。
+
+                    </p>
+                    
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="images/theme/theme/1.jpg" alt="Arduino x 單擺">
+                        </div>
+                    </div>
+                    <p class="clickme">
+                        Click me!
+                    </p>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="images/perform/報告組照片/1.jpg" alt="演講者照片">
+                    </div>
+                    <p>演講者:二戊 張宸恩</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        生成式AI x 文學
+                    </h1>
+                    <p>
+                        ChatGPT推出後，會是文字工作者的勁敵？還是助力呢？聽說ChatGPT的語料訓練都是英文，隨便問點國文常識就會直接陣亡？本次專題將會一探如何結合適當的提示詞，用生成式AI寫出如假包換，符合格律的古詩詞；以及設計一套完整的流程，讓ChatGPT寫出連普通人都分不出來是真是假的短篇小說，最後以我自己在網路上連載的長篇小說為例，探討生成式AI到底如何在寫作時成為文字工作者的「協作夥伴」。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/2.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二丙 吳霈彤</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        p21與白血病化療
+                    </h1>
+                    <p>
+                        我們研究癌細胞中p21蛋白的作用及其對藥物反應的影響。由於癌細胞會大量生產p21蛋白，我們設計實驗探討其功能。實驗步驟包括：利用siRNA抑制p21蛋白表達，透過Western
+                        blot檢測蛋白量，並用流式細胞儀分析細胞死亡情況，最後對數據進行分析。本研究旨在闡明p21蛋白在癌細胞中的角色。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/3.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二己 王睿彰 林孟儒</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        建一個自己的薇閣
+                    </h1>
+                    <p>
+                        我想試著以一個建築師的角度觀察身邊的事物，為此我走遍了校園的各處，拍下不同角度的薇閣，並將其一一製作於Tinkercad上，這次自主學習讓我以建築師的角度觀察生活中的建築，體會其稜角、線條及與環境的融合。建築不僅是外觀的藝術表現，更需在功能性與美感間取得平衡。透過材質、光影與細節設計，建築傳達設計者的理念。這次學習不僅增進了我的建築知識，也激發了創作渴望，期待未來能結合技術與創意設計出獨特作品，為使用者帶來舒適與美感，探索建築設計的無窮魅力。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/4.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二丁 張博筌</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        3D建模X標本學
+                    </h1>
+                    <p>
+                        雞翅解剖時，常無法清楚觀察到較複雜的骨骼。使用Blender建模製造雞翅骨骼模型，並透過geometry nodes, uv unwrapping, texture painting
+                        等功能創造出更逼真的模型。最後加入動畫，使剖析過程更生動。3D建模能在日後做出任何東西，視覺化難懂事物
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/5.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 連庭禧</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        AIx奈米工程
+                    </h1>
+                    <p>
+                        試想，是什麼主導AI的創作呢？是的，我們將從大型語言模型出發，介紹建構AI的過程及好用的AI工具給你（只知道ChatGPT弱掉了XD）。接著拉到DNA奈米製程，向你介紹基本技術構想和原理，以及AI是如何幫助這個技術省錢與時間，加速生物奈米科技發展。總結來說，你將認識AI的原理在商業、生活和生物上的發展及其應用。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/6.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二己 吳哲安 林和頤</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        Apocalyptic Rage: Dance of Fury
+                    </h1>
+                    <p>
+                        我們想自己製作一款槍戰遊戲，之後改成打怪遊戲。在遊戲裡，玩家會遇到各種不同能力的怪物。玩家除了使用手上的槍和劍，還要制定各種策略針對各式各樣的怪物，最後打敗最終大魔王，通關遊戲。我們利用並學習Unity,
+                        Tinkercad打造遊戲，獲益良多。未來希望能製做更多有趣的遊戲。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/7.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二甲 林秉洋 張富鈞 二辛 張瑜宸</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        《山海經》醫學
+                    </h1>
+                    <p>
+                        《山海經》書內記載著各種療效，雖然具有濃厚神話色彩，但從植物到野獸，或者是對山河及地方人文的細節描述，都無疑是一本經典著作，尤其是書內含有的各種珍禽異獸，每個都具有獨樹一幟的特色，法國作家羅曼羅蘭沒有說過，認識《山海經》裡的每個生物就跟蒐集寶可夢圖鑑一樣好玩，本次報告著重於講解書中生物所含有的醫療效果。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/8.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/8.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二丙 陳竑安</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        醫療影像分析
+                    </h1>
+                    <p>
+                        有沒有可能未來我們去醫院後，不用等醫師診斷就能知道自己得了什麼病？這就是"AI數位醫療影像分析"。
+                        透過在判讀醫療影像上結合機器學習，便能輔助醫生診斷、預測疾病、評估療效。身為人工智慧的一個分支，透過分析大量的資料，就能學會自己判斷特定疾病，省略人工判斷每一個病例的環節。這次我們將介紹我們訓練的皮膚疾病辨識模型，並調整參數以提高正確率。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/9.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/9.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二己 馬詩涵 林筱婷</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        初探物聯網系统
+                    </h1>
+                    <p>
+                        在這個數位化迅速發展的時代，物聯網成為日常生活中密不可分的一部份。在這個專題裡，我將使用Linux伺服器，搭建簡易的物聯網系統，來實現自動化、智慧化的數據分析與決策過程。穿梭在網路世界中，各設備中的聯繫與協議成了此專題最重要的觀念。更盼在未來能夠將所學應用在各場景，享受物聯網帶來的便利與效率。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/10.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 蘇宥宇</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        DGE MRI 曲線分析與應用
+                    </h1>
+                    <p>
+                        隨著程式語言的發展、數據分析的功能成熟，如何將其利用在學術研究便是值得探討的主題。在面對龐大的 DGE MRI
+                        數據量，透過Python程式的Clustering功能設定不同參數與計算依據，可以精準區分小鼠腦部癌細胞與正常細胞，提供數據判別時的輔助。未來希望更進一步使用深度神經網路和DGE
+                        MRI的大數據建立運算模型，使用AI做出更精確的判斷。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/11.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/11.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 戴樂</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        Unity遊戲設計
+                    </h1>
+                    <p>
+                        我們選擇使用 Unity
+                        仿作一款類似《紀念碑谷》的遊戲，親手設計遊戲中的地圖、角色等元素，並撰寫程式碼實現遊戲的運作。在製作遊戲的過程中，常會遇到各種挑戰與障礙，但也因此深刻體會到堅持到底、不輕言放棄的重要性。每款遊戲的成功看似簡單，其實背後都有無數人默默的努力與付出。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/12.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/12.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 陳崇岳 馬品誠 蔡睿紘</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        AI多功能作業機
+                    </h1>
+                    <p>
+                        在人工智慧突飛猛進的年代，AI一詞已經滲入你我的生活。然而，卻沒有幾個像樣的工具類產品問世。至此，無用良品打算開闢新大陸，拯救在水火之中的學生，挽回老師改作業損失的時間，打造新一代學習最佳夥伴。不僅能寫作業、改作業，更能另外生成解析參考；抑或是透過微調的大模型撰寫動人的文章。各式擴充功能等你研發，一同打造智慧學習的未來！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/13.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/13.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二己 蕭詣軒</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        「泰」度決定行銷高度
+                    </h1>
+                    <p>
+                        當我們想到泰勒絲，或許腦海浮現的是享譽國際的歌手，抑或是演唱會收入總能入袋好幾億的創作家。不過這次我想帶領大家一同看見泰勒絲不一樣的面貌——行銷天才。透過比較泰勒絲與自己在賣英文筆記時所使用的行銷策略，探討我在行銷上可以改進的地方。就讓我帶領大家攜手展開一場行銷策略的邂逅吧！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/14.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/14.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二乙 廖婕安</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        網頁設計與開發
+                    </h1>
+                    <p>
+                        希望透過更加現代的方式，讓更多人可以更清楚的瞭解每天都會接觸到的網頁，以及他的運行方式。一個可以進行多種不同領域的學習工具。透過自己架設網頁，讓我們學習更多有關它的知識，也可以增進對網路安全的了解。希望可以有更多的資料豐富各領域的內容和更多的使用者在此進行討論，精進個項目的知識。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/15.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/15.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二辛 鄒佳佑 黃子恆 陳禹睿</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        癌 ! 前列腺
+                    </h1>
+                    <p>
+                        前列腺癌作為台灣癌症死因第六名，死亡率有著逐年上升的趨勢。為了找到可以治療前列腺癌的中草藥，我利用CRISPR基因編輯的技術設計了報導基因—於目標基因後方加入螢光或冷光基因，用來協助藥物篩選。透過自主學習，我實際操作了之前經常耳聞的CRISPR技術，也學習到生物實驗操作的詳細步驟。未來希望能改進目前的報導基因，找到最合適的基因進一步篩藥。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/16.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/16.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 謝亞恆</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        骨·頭
+                    </h1>
+                    <p>
+                        因為對解剖學很有興趣，尤其喜歡看骨頭的結構，因此選擇骨頭作為自主學習的題目。本次報告從骨骼形成、到各種顏面骨的繪製與各種結構，以及最後骨折的形成與修復，都會一一和大家介紹。希望未來能夠結合肌肉和關節，製作有關運動機制的全面學習。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/17.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/17.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 何晟維 林冠宇</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        讓球轉彎的魔法
+                    </h1>
+                    <p>
+                        電視上，投手投出一顆漂亮的變化球，三振了打者 ; 球員踢出了一棵香蕉球，射門得分。為什麼好端端一顆球，從別人手裡丟出來就可以跑出美麗的弧線 ？重力，大家都知道 ; 馬格納斯力，相信大家都聽過
+                        ; 縫線飄移尾流，沒聽過，但感覺就很厲害，透過這三個工具，我可以讓球隨心所欲的轉彎，使出"讓球轉彎的魔法"。 </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/18.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/18.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二丁 蔡文瑋</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        大腦休息，夢境重生
+                    </h1>
+                    <p>
+                        我們對於大腦在睡眠中進行的活動感到好奇，因此希望深入了解睡眠對認知功能與健康的影響。探討大腦在不同睡眠階段的活動，以及睡眠與我們日常生活的關聯性，還有失眠的一些誤解。透過研究，我們了解到睡眠對於學習效率、情緒穩定和免疫力的重要性。未來，我們希望進一步將這些知識應用於改善學習與健康管理。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/19.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/19.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二己 陳則叡 陳昱睿 陳宥安</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        單身經濟
+                    </h1>
+                    <p>
+                        隨著社會人口改變、生活成本增加、個人自由更加被重視……等因素，單身人口不斷增加。在這種趨勢之下，人們的消費觀、消費習慣、消費需求也隨之改變，而造就「單身經濟」的崛起。不妨看看生活中的實際例子，例如：一蘭拉麵的單人座位、小型家電的需求量增加、超市賣場有更多高單價小包裝的食物……。我們藉由生活中的許多例子去探討單身人士的需求，也就是「單身經濟」帶來的巨大商機。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/20.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/20.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二乙 林韋宇 二丙 李佳哲</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        Role of CCT7 in lung cancer progression
+                    </h1>
+                    <p>
+                        癌症的致命性主要在於其轉移與復發。我們研究發現，癌症高復發率或與CCT7表現密切相關。當細胞中CCT7表現量高時，細胞增殖迅速但抗藥性較低；而CCT7表現量低時，細胞雖生長減緩，卻具高度抗藥性。我們推測，化療僅能抑制高CCT7表現的細胞，導致低表現的細胞持續潛伏並可能轉移。一旦低CCT7表現細胞重新轉為高表現，癌症即可能復發。本次報告旨在驗證此推論。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/21.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/21.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 林傳虔 邱崇安</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        新冠治療雙線戰場
+                    </h1>
+                    <p>
+                        新冠疫情導致雙重感染與超級細菌增加，促使我們研究抗生素作用機制、細菌抗藥性與清冠一號療效。透過文獻回顧了解抗生素多種機制抑制細菌生長，細菌如何產生抗藥性，並認識COVID-19對抗藥性的影響及清冠一號多靶點抑制病毒與炎症的效用。希望未來能結合創新技術，應用於抗藥性與病毒治療領域，為醫療突破與公共健康改善作出貢獻。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/22.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/22.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二辛 陳芃安 陳虹谷 魏妤真</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        外泌體對細胞的影響
+                    </h1>
+                    <p>
+                        納豆菌因能形成孢子在惡劣環境下休眠，具有高環境耐受性，並能穩定調整體質與菌群生態。其親緣菌枯草桿菌已證實能利用外泌體穿越腸道上皮，因此本研究以納豆菌為對象，利用NTA、細胞存活率分析以及rna定序來探討其外泌體對小鼠巨噬細胞mRNA表現的影響。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/23.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/23.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 黃凱蔚</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        反毒大作戰
+                    </h1>
+                    <p>
+                        擁有視覺功能的世界是精彩而豐富的！然而，人體並非百毒不侵，病毒的入侵可能會破壞神經系統，造成視覺等感官的損傷，使我們失去許多眼球與大腦合作能產生的有趣功能。這次的專題，會用故事和動畫帶領大家一一探討人體的視覺和病毒的特性及增殖方式，摸清這位入侵者的底細，進行反毒大作戰！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/24.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/24.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二己 李宥岑 劉奕宏</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="front">
+                    <h1>
+                        動畫 • 數學
+                    </h1>
+                    <p>
+                        動畫具體來說怎麼做呢？
+                        其實和日常生活中常見的影片原理是一樣的。我們平常看到的影片，如果放慢速度就可以發現，其實是很多張照片在快速的播放，再由我們的大腦將他們想成連續的。
+                        為什麼會選擇做數學的動畫呢？
+                        因為大部分人只把數學看成一門要考試的學科，看到數學就煩。因此我希望能透過動畫把抽象的數學概念呈現出來，讓大家看到數學與幾何的美。
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/theme/theme/25.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/perform/報告組照片/25.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <p>演講者:二戊 陳昶文</p>
+                </div>
+            </div>
+            <button id="next1">></button>
+            <button id="prev1"><</button>
+        </div>
+    </div>
+    <div class="text-container" id="stall">攤位組名單</div>
+    <div class="slider-container" >
+        <div class="slider3">
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        Emoji Maker 表情製造機                    
+                    </h1>
+                    <p>
+                        表情是重要的溝通方式，我們希望透過自主學習，理解臉部神經和肌肉的運作機制。藉由攤位可以讓參與者了解微笑、皺眉等表情背後的肌肉運作和神經控制，介紹內容涵蓋臉部主要肌肉和神經的功能，以及它們如何共同完成各種表情，遊戲部分則包含兼具趣味性與知識性的emoji消消樂、舌尖上的藝術及唇唇欲動。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="images/攤位theme/攤位theme/1.jpg" alt="Emoji Maker">
+                        </div>
+                    </div>
+                    <p class="clickme">
+                        Click me!
+                    </p>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="images/stall/攤位組/1.jpg" alt="攤主照片">
+                    </div>
+                    <p>攤主:二戊 黃宥瑄 馮行至</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        五行有道，針針有理                    
+                    </h1>
+                    <p>
+                        大家有去看過中醫嗎？是否對這一派古老又神秘的醫學感到好奇？
+                        來到我們的攤位，可以學習到許多關於「中醫基礎理論」的知識，像是五行對應
+                        器官的理論，還有許多常見又實用的經絡穴位，除此之外，我們也有好玩的「五行球遊戲」可以讓大家邊玩邊學習，更能夠親自體驗「針灸」的樂趣。歡迎大家來看看！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/2.jpg" alt="">
+                    </div>
+                    <p>攤主:二己 王妍華 楊婧慈 林晟志 陳冠銘</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        圖靈動物園
+                    </h1>
+                    <p>
+                        你有想過電腦是怎麼看懂圖片的嗎？簡單來說，電腦會從大量的資料中學習，從中找到規律並學會自己做出最佳的判斷，而不用人工設定每一個判斷的標準，而這，就稱為「機器學習」。我們的攤位將介紹機器學習的基本原理以及應用，並展示我們訓練出的手繪動物辨識模型，讓參觀者自己繪製出動物給模型判斷，實際體驗機器學習的奧妙。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/3.jpg" alt="">
+                    </div>
+                    <p>攤主:二己 馬詩涵 賴宥妡 王亞晴 詹定宸</p>
+                </div>
+            </div>
+
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        世界第一中藥學
+                    </h1>
+                    <p>
+                        中藥具有獨特的魅力吸引著我們去研究，在日常生活中，中藥不僅僅在治療疾病中扮演重要的角色，更蘊含了千百年來的文化智慧，透過設立這個學習攤位，我們希望激發對中藥奧秘的興趣，並提升對傳統醫學的理解，本攤位將會發放架構十全大補湯的中藥材，供大家去親手碰觸，希望大家能有更深刻的體驗，未來也希望能夠更深入的研究中藥
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/4.jpg" alt="">
+                    </div>
+                    <p>攤主:二丁 葉繁恩 王皓 陳逸倫 盧科宏</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        幣經之路
+                    </h1>
+                    <p>
+                        在生活中，經濟與我們的行為息息相關，各種經濟理論早已融入日常，但我們未必能察覺。透過「幣經之路」，我們設計了趣味十足的Kahoot遊戲，幫助大家輕鬆學習經濟知識；製作了賽局理論互動遊戲，讓參與者親身體驗策略的魅力；更準備了經濟奧林匹亞題目挑戰，激發挑戰自我的熱情。我們希望讓大家認識匯率、市場結構、價格歧視等經濟概念如何應用於生活中，並透過這次活動，啟發對經濟的興趣與思考。快來探索經濟學的無限樂趣吧！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/5.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/5.jpg" alt="">
+                    </div>
+                    <p>攤主:二乙 張乃云	王意愷 葉士愷 石喬如</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        細理拼圖探律意
+                    </h1>
+                    <p>
+                        想成為法律界的福爾摩斯嗎？快來挑戰我們的**法律拼圖遊戲**！每個案件都是一個複雜的謎團，等待你的智慧來解開。在這裡，你將化身為神探，運用你的法律知識抽絲剝繭，從細節中尋找線索，推理出答案。與此同時，你還可以與隊友合作或競爭，比拼誰能最快破解謎題，搶奪「最佳法律偵探」的稱號！不僅能在趣味中提升法律推理能力，還能體驗偵破案件的緊張與成就感。準備好展開你的偵探之旅了嗎？一起來挑戰吧！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/6.jpg" alt="">
+                    </div>
+                    <p>攤主:二乙 施亞岑 吳冠德 柯邑儒 二丙 郭馥儀</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        程式邏輯與設計                    
+                    </h1>
+                    <p>
+                        在現在科技發達的時代，數位化的趨勢已是無可避免，因此，程式能力成為了一個想跟上時代潮流的人的必備技能。若想要學習程式，基礎程式語言python便佔了十分重要的角色，所以在這一次的成發專題當中，我們將會透過曾經聞名的遊戲PAC-Man 的python自創版來向你們傳達一些基本的邏輯概念和語法，並為你們打開程式語言的大門。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/7.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/7.jpg" alt="">
+                    </div>
+                    <p>攤主:二戊 詹加靖	二己 許宇鋐 周秉森</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        糖拼族
+                    </h1>
+                    <p>
+                        「醣拼族」攤位有兩大精彩遊戲：
+                        骨骼拼圖結合了生物醫學和藝術，讓你一邊體驗操作骨骼拼圖，一邊學習人體骨骼組成，探索人體骨骼的奇妙！
+                        醣類賓果讓你一邊玩遊戲，一邊學習各種醣類知識。醣類作為人體主要的能量來源有許多功能，以賓果遊戲讓大家初步地認醣類。
+                        完成骨骼拼圖或醣類賓果都可以抽一番賞，有s'mores、視錯小物、和各種零食等你來挑戰！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/8.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/8.jpg" alt="">
+                    </div>
+                    <p>攤主:二己 李宥岑 蔡沂伶 劉奕宏 童千芮</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        馨香縈懷袖
+                    </h1>
+                    <p>
+                        在科學高度發展的現代，除了先進的醫療科技，中藥及芳香療法等民間偏方在科學研究和機器輔助下也逐漸成為日常生活中容易上手的實用工具，不僅能幫助我們紓解壓力與不適，更可以提振精神甚至是提升免疫力。藉由這次自主學習的機會，我們希望探索精油背後的科學，並在安全的使用觀念下，透過手作形式帶領大家踏入神奇的精油世界
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/9.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/9.jpg" alt="">
+                    </div>
+                    <p>攤主:二戊 陳咏妍 薛以欣 二己 陳柏誠</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        解碼語言基因
+                    </h1>
+                    <p>
+                        我們以前在影視作品和遊戲中對其中的人造語言產生興趣，後來開始研究人類語言學的基本邏輯，並在班導的介紹下認識了語奧。在這個攤位中，我們提供了簡化過後的語奧題目，讓參觀者兩人一組競賽，以獲取獎品。題目類型參考了歷屆語奧初選試題，包含文法、詞彙等。我們希望透過這個攤位，讓更多人認識語奧，甚至能獲得語奧國手資格。
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/10.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/10.jpg" alt="">
+                    </div>
+                    <p>攤主:二戊 徐允中 蘇士閎</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        養程計畫
+                    </h1>
+                    <p>
+                        你真的懂吃嗎？為了讓大家能輕鬆學習營養知識，揭曉食物中的秘密，我們設計了結合營養學和程式設計的「養程計畫」，除了有專業介紹引導同學更加了解相關知識，學習之餘，還能挑戰Unity程式遊戲，順便贏取手工精美餅乾，歡迎大家來建立屬於自己的養程計畫！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/11.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/11.jpg" alt="">
+                    </div>
+                    <p>攤主:二戊 方品璇 陳詩涵</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="front">
+                    <h1>
+                        居然這麼型
+                    </h1>
+                    <p>
+                        你有沒有想過要如何照顧家中的長輩？抑或是曾經對鼻胃管餵食或居家照顧有疑問？不管是認識簡單的身體結構或是基本的照顧技巧在我們的攤位都可以學習到喔，還會帶你試試看餵食鼻胃管以及提及注意事項，或許還可以讓你活動一下身體？如果對醫療或照護有興趣都可以來看看！
+                    </p>
+                    <div class="frontimg">
+                        <div class="img-wrapper">
+                            <img src="../images/攤位theme/攤位theme/12.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="backimg">
+                        <img src="../images/stall/攤位組/12.jpg" alt="">
+                    </div>
+                    <p>攤主:二己 周芷伶 韓昀珊</p>
+                </div>
+            </div>
+            <button id="next2">></button>
+            <button id="prev2"><</button>
+        </div>
+    </div>
+    <div class="groupimg" id="staff">
+        <img src="images/mail.jpg" alt="Group Image">
+    </div>
+    <div class="slider2-container">
+        <div class="slider2" id="worker">
+            <div class="list">
+                <div class="items2" style="--position:1">
+                    <span>
+                        文宣組:⼆⼄ 羅莉蓁 ⼆戊 ⽅品璇 王曉涵 吳紜萱 薛以欣 ⾼⼦宸
+                    </span>
+                </div>
+                <div class="items2" style="--position:2">
+                    <span>
+                        美術組:⼆⼄ 蔡⾀兒 ⽯喬如 施亞岑 ⼆丙 廖渝婕 ⼆戊 林冠宇 陳亭⾀ ⼆⼰ 王妍華 林晟志 陳亭⾀ 陳澤謙 蔡沂伶 韓昀珊 ⼆⾟ 蔡青霓
+                    </span>
+                </div>
+                <div class="items2" style="--position:3">
+                    <span>
+                        公關組:⼆⼄ 廖婕安 ⼆丙 符幫慧 ⿈愛娳 趙萱霖 ⼆戊 連庭禧 莊敏妍 ⿈⼼⾙ 何晟維
+                    </span>
+                </div>
+                <div class="items2" style="--position:4">
+                    <span>
+                        總務組:⼆⼄ 連⼦禕 葉⼠愷 ⼆丙 王畇詒 葉芠妏 ⼆丁 盧科宏 ⼆戊 呂運和 張宸恩 詹加靖 ⼆⼰ 蔡沁妍 蔡欣睿
+                    </span>
+                </div>
+                <div class="items2" style="--position:5">
+                    <span>
+                        資訊組:⼆甲 邱浩宸 ⼆丙 簡唯哲 ⼆戊 蔡睿紘 蘇宥宇 ⼆⼰ 王瀚霆 陳昶⽂ 蕭詣軒 ⼆⾟ 劉展寧
+                    </span>
+                </div>
+                <div class="items2" style="--position:6">
+                    <span>
+                        表演組:⼆⼄ 王意愷 郭濬澄 ⼆丁 陳逸倫 謝承羲 張博筌 ⼆⼰ 陳冠傑 陳昱睿 劉奕宏
+                    </span>
+                </div>
+                <div class="items2" style="--position:7">
+                    <span>
+                        音樂組:⼆⼄ 王妤軒 ⼆丙 林俞杉 ⼆戊 呂芊儀 林昱衡 李怡穎 陳詩涵 謝亞恆 戴 樂 ⼆⼰ 周芷伶 林筱婷 賴宥妡 ⼆⾟ 魏劭宸
+                    </span>
+                </div>
+                <div class="items2" style="--position:8">
+                    <span>
+                        總召大大們:⼆甲 林秉洋 ⼆⼄ 張乃云 ⼆丙 蔡庭淮 ⼆丁 葉繁恩 ⼆戊 楊寓閑 張嘉誠 ⼆⼰ 陳柏誠 ⼆⾟ 施凱恩
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascript/main2.js"></script>
+</body>
+
+</html>
