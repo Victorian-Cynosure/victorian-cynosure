@@ -119,6 +119,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
 
   const musicContainer = document.getElementById('music-animation');
   let isPlayingmusic=true;
+  const controlMusic = document.querySelectorAll('.control-music'); 
   let progress=document.getElementById("progress");
   let song=document.getElementById("song");
   const logoImg = document.querySelector('.logo-img');
@@ -169,29 +170,71 @@ progress.onchange=function(){
   song.play();
   logoImg.classList.add('logo-spin');
 }
+const handleMediaQuery = () => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  function handleScreenChange(e) {
+    if (e.matches) {
+      // Force stop everything when on mobile
+      song.pause();
+      isPlayingmusic = false;
+      logoImg.classList.remove('logo-spin');
+      if (musicanimation) {
+        musicanimation.setDirection(1);
+        musicanimation.play();
+      }
+      
+      // Add event listeners to prevent playing on mobile
+      document.addEventListener('click', preventPlay);
+      document.addEventListener('keydown', preventPlay);
+      document.addEventListener('touchstart', preventPlay);
+    } else {
+      // Remove the preventPlay listeners when not on mobile
+      document.removeEventListener('click', preventPlay);
+      document.removeEventListener('keydown', preventPlay);
+      document.removeEventListener('touchstart', preventPlay);
+    }
+  }
+
+  function preventPlay(e) {
+    if (mediaQuery.matches) {
+      song.pause();
+      isPlayingmusic = false;
+      logoImg.classList.remove('logo-spin');
+      e.stopPropagation();
+    }
+  }
+  mediaQuery.addEventListener('change', handleScreenChange);
+  
+  // Initial check
+  handleScreenChange(mediaQuery);
+}
 const initializeAudio = () => {
-  // Set up audio context
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioContext = new AudioContext();
-  // Add event listener for user interaction
+  
   const playAudio = () => {
+    // Check if we're on mobile before playing
+    if (!window.matchMedia('(max-width: 768px)').matches) {
       song.play()
-          .then(() => {
-              // Successful autoplay
-              isPlayingmusic = true;
-              logoImg.classList.add('logo-spin');
-              musicanimation.setDirection(-1);
-              musicanimation.play();
-              // Remove the event listeners once played
-              document.removeEventListener('click', playAudio);
-              document.removeEventListener('keydown', playAudio);
-              document.removeEventListener('touchstart', playAudio);
-          })
-          .catch((error) => {
-              console.log("Autoplay prevented:", error);
-              isPlayingmusic = false;
-          });
+        .then(() => {
+          isPlayingmusic = true;
+          logoImg.classList.add('logo-spin');
+          musicanimation.setDirection(-1);
+          musicanimation.play();
+          document.removeEventListener('click', playAudio);
+          document.removeEventListener('keydown', playAudio);
+          document.removeEventListener('touchstart', playAudio);
+        })
+        .catch((error) => {
+          console.log("Autoplay prevented:", error);
+          isPlayingmusic = false;
+        });
+    }
+    else{
+      song.pause();
+    }
   };
+
   document.addEventListener('click', playAudio);
   document.addEventListener('keydown', playAudio);
   document.addEventListener('touchstart', playAudio);

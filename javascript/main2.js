@@ -111,21 +111,16 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
 
   const musicContainer = document.getElementById('music-animation');
   let isPlayingmusic=true;
+  const controlMusic = document.querySelectorAll('.control-music'); 
   let progress=document.getElementById("progress");
   let song=document.getElementById("song");
   const logoImg = document.querySelector('.logo-img');
-  song.loop = true;
-  song.addEventListener('loadedmetadata', function() {
-    progress.max = song.duration;
-    progress.value = 0;
-    console.log("Duration set:", song.duration); // Debug log
-  });
   let musicanimation = lottie.loadAnimation({
       container: document.getElementById('music-animation'),
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/victorian-cynosure/json/playPause.json'
+      path: '/json/playPause.json'
   });
   musicanimation.addEventListener('DOMLoaded', () => {
     const svgElement = musicContainer.querySelector('svg');
@@ -133,10 +128,6 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     paths.forEach(path => {
         path.style.stroke = '#ffffff';
     });
-});
-song.addEventListener('ended', function() {
-  song.currentTime = 0;
-  song.play();
 });
 musicContainer.addEventListener('click', () => {
   if(isPlayingmusic){
@@ -160,7 +151,7 @@ song.onloadedmetadata=function(){
 if(song.play()){
   setInterval(()=>{
     progress.value=song.currentTime;
-  },100);
+  },500);
 }
 progress.onchange=function(){
   song.play();
@@ -171,33 +162,76 @@ progress.onchange=function(){
   song.play();
   logoImg.classList.add('logo-spin');
 }
+const handleMediaQuery = () => {
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  function handleScreenChange(e) {
+    if (e.matches) {
+      // Force stop everything when on mobile
+      song.pause();
+      isPlayingmusic = false;
+      logoImg.classList.remove('logo-spin');
+      if (musicanimation) {
+        musicanimation.setDirection(1);
+        musicanimation.play();
+      }
+      
+      // Add event listeners to prevent playing on mobile
+      document.addEventListener('click', preventPlay);
+      document.addEventListener('keydown', preventPlay);
+      document.addEventListener('touchstart', preventPlay);
+    } else {
+      // Remove the preventPlay listeners when not on mobile
+      document.removeEventListener('click', preventPlay);
+      document.removeEventListener('keydown', preventPlay);
+      document.removeEventListener('touchstart', preventPlay);
+    }
+  }
+
+  function preventPlay(e) {
+    if (mediaQuery.matches) {
+      song.pause();
+      isPlayingmusic = false;
+      logoImg.classList.remove('logo-spin');
+      e.stopPropagation();
+    }
+  }
+  mediaQuery.addEventListener('change', handleScreenChange);
+  
+  // Initial check
+  handleScreenChange(mediaQuery);
+}
 const initializeAudio = () => {
-  // Set up audio context
   const AudioContext = window.AudioContext || window.webkitAudioContext;
   const audioContext = new AudioContext();
-  // Add event listener for user interaction
+  
   const playAudio = () => {
-    song.play()
+    // Check if we're on mobile before playing
+    if (!window.matchMedia('(max-width: 768px)').matches) {
+      song.play()
         .then(() => {
-            isPlayingmusic = true;
-            logoImg.classList.add('logo-spin');
-            musicanimation.setDirection(-1);
-            musicanimation.play();
-            document.removeEventListener('click', playAudio);
-            document.removeEventListener('keydown', playAudio);
-            document.removeEventListener('touchstart', playAudio);
+          isPlayingmusic = true;
+          logoImg.classList.add('logo-spin');
+          musicanimation.setDirection(-1);
+          musicanimation.play();
+          document.removeEventListener('click', playAudio);
+          document.removeEventListener('keydown', playAudio);
+          document.removeEventListener('touchstart', playAudio);
         })
         .catch((error) => {
-            console.log("Autoplay prevented:", error);
-            isPlayingmusic = false;
+          console.log("Autoplay prevented:", error);
+          isPlayingmusic = false;
         });
+    }
+    else{
+      song.pause();
+    }
   };
+
   document.addEventListener('click', playAudio);
   document.addEventListener('keydown', playAudio);
   document.addEventListener('touchstart', playAudio);
   playAudio();
 };
-
 document.addEventListener('DOMContentLoaded', initializeAudio);
 
   musicanimation.addEventListener('DOMLoaded', () => {

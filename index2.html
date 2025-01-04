@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自主學習成發</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -45,44 +46,53 @@
                     </div>
                 </div>
             </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="close-icon">
+                <i class='bx bx-menu' id="menu-list"></i>
+                <i class='bx bx-x' id="close-menu" ></i>
+            </label>
             <div class="main-menu">
-                <ul>
+                <ul class="dropdown-container">
                     <li>
-                        <div class="dropdown">
-                            <a href="index.html#nav" class="dropbtn">首頁</a>
+                       <div class="dropdown">
+                        <a href="index.html#nav" class="dropbtn">首頁</a>
                             <div class="dropdown-content">
                                 <a href="index.html#background">背景介紹</a>
                                 <a href="index.html#timeline">時程表</a>
-                            </div>
-                        </div>
+                           </div>
+                       </div>
                     </li>
                     <li>
                         <div class="dropdown">
                             <a href="index2.html#nav" class="dropbtn">表演者名單</a>
-                            <div class="dropdown-content">
-                                <a href="index2.html#perform">報告組名單</a>
-                                <a href="index2.html#stall">攤位組名單</a>
-                                <a href="#timetable">海報組名單</a>
-                                <a href="index2.html#staff">工作人員名單</a>
-                            </div>
-                        </div>
+                                <div class="dropdown-content">
+                                    <a href="index2.html#perform">報告組名單</a>
+                                    <a href="index2.html#stall">攤位組名單</a>
+                                    <a href="#timetable">海報組名單</a>
+                                    <a href="index2.html#staff">工作人員名單</a>
+                               </div>
+                           </div>
                     </li>
                     <li>
-                        <div id="instagram-animation" class="instagram-animation">
+                        <div id="instagram-animation" class="instagram-animation menu-icon">
                             <a href="https://www.instagram.com/victorian_cynosure/"></a>
                         </div>
                     </li>
                     <li>
-                        <div id="youtube-animation" class="youtube-animation">
+                        <div id="youtube-animation" class="youtube-animation menu-icon">
                             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"></a>
                         </div>
                     </li>
                     <li class="search-item">
                         <div class="search">
-                            <dotlottie-player id="search-icon" class="search-icon"
-                                src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie"
-                                background="transparent" speed="1"></dotlottie-player>
-                            <input class="search_input" type="text" placeholder="search...">
+                            <dotlottie-player 
+                            id="search-icon"
+                            class="search-icon"
+                            src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
+                            background="transparent" 
+                            speed="1" 
+                            ></dotlottie-player>
+                            <input class="search_input" type="text" placeholder="search.">
                         </div>
                     </li>
                 </ul>
