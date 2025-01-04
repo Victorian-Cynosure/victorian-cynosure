@@ -53,12 +53,14 @@
     --light-color: #f4f4f6;
     --dark-color: #111;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 body {
     background-image: url(../images/backpic\ modified.png), url(../images/backpic2.png);
     background-repeat: no-repeat, repeat;
     background-size: contain;
-    background-size: 100vw auto;
+    background-size: 100% auto;
     font-size: 16px;
     line-height: 1.5;
     background-color: white;
@@ -687,6 +689,7 @@ ul {
     z-index: 100;
     display: flex;
     gap: 20px;
+    overflow: hidden;
 }
 .thumbnail .item{
     width: 220px;
@@ -1200,11 +1203,11 @@ ul {
         color: #722F37;
     }
     .carousel-container{
-        width: 100vw;
+        width: 100%; 
         height: 450px;
     }
     .carousel{
-        width: 90vw;
+        width: 90%;
         height: 400px;
     }
     .thumbnail{
@@ -1235,5 +1238,17 @@ ul {
         to{
            width: 110px;
         }
+    }
+    .thumbnail{
+        overflow-x: hidden;
+    }
+    img{
+        overflow: hidden;
+    }
+    .item{
+        overflow: hidden;
+    }
+    .carousel-container{
+        overflow: hidden;
     }
 }

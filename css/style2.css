@@ -908,7 +908,7 @@ ul {
     }
     .item .front h1 {
         font-family: 'DFMingW4';
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         font-weight: bold;
         color: #d5d2c3;
     }
@@ -920,7 +920,7 @@ ul {
     }
     .item .front p {
         font-family: 'DFMingW4';
-        font-size: 1.0rem;
+        font-size: 0.85rem;
         color: #fff;
     }
     
@@ -965,7 +965,7 @@ ul {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: bold;
         font-family: "DFMingW4";
     }
@@ -1032,5 +1032,16 @@ ul {
         height: auto;
         max-width: 1200px; /* Adjust based on your needs */
         margin: 0 auto;
+    }
+    .slider2 .list {
+        animation: scroll 60s linear infinite;
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
     }
 }
