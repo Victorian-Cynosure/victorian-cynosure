@@ -120,7 +120,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/json/playPause.json'
+      path: '/victorian-cynosure/json/playPause.json'
   });
   musicanimation.addEventListener('DOMLoaded', () => {
     const svgElement = musicContainer.querySelector('svg');
