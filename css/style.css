@@ -14,7 +14,7 @@
 
 
 @font-face {
-    font-family: 'DFMingW4';
+    font-family: "Noto Serif TC", serif;
     src: url('../fonts/wenzengming.TTF') format('truetype');  /* 使用 TTF 格式 */
     font-weight: normal;
     font-style: normal;
@@ -115,7 +115,7 @@ ul {
 }
 #progress::-webkit-slider-thumb{
     -webkit-appearance: none;
-    background-color: #722F37;
+    background-color: #753533;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -124,7 +124,7 @@ ul {
 }
 /* Navbar */
 .navbar {
-    background-color: #722F37;  /* 酒紅色 */
+    background-color: #753533;  /* 酒紅色 */
     /* padding: 1rem; */
     width: 100%;
     height: auto;
@@ -179,7 +179,7 @@ ul {
     /* border-top: 3px solid ; */
     display: inline-block;
     padding: 0.625rem 1.25rem;
-    background-color: #722F37;
+    background-color: #753533;
     outline: 0;
     color: #F5E6E8;  /* 淺粉白色 */
     /* 加深字體粗細 */
@@ -203,7 +203,7 @@ ul {
     display: none;
     font-weight: 600;
     position: absolute;
-    background-color: #722F37;
+    background-color: #753533;
     margin-top: 1px;
     font-size: large;
     padding: 7.5px 0.5px;
@@ -647,7 +647,7 @@ ul {
     margin-top: 10px;
     position:relative;
     border-radius: 45px;
-    border: solid 2px #722F37;
+    border: solid 2px #753533;
 }
 .carousel .list .item{
     position: absolute;
@@ -673,12 +673,12 @@ ul {
 .carousel .list .item .content .title{
     font-weight: bold;
     font-size: 1.5rem;
-    color: #722F37;
+    color: #753533;
 }
 .carousel .list .item .content .backinfo{
     font-weight: bold;
     font-size: 1.25rem;
-    color: #722F37;
+    color: #753533;
 }
 /* thumbnail */
 .thumbnail{
@@ -856,7 +856,7 @@ ul {
 .time{
     width: 100%;
     height: 3px;
-    background-color: #722F37;
+    background-color: #753533;
     position: absolute;
     z-index: 100;
     top: 0;
@@ -923,7 +923,7 @@ ul {
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar {
   position: relative;
   margin-bottom: 70px;
-  border-bottom: 1px solid #722F37;
+  border-bottom: 1px solid #753533;
   background-color: transparent;
   height: 4px;
   top: 15px;
@@ -932,7 +932,7 @@ ul {
 }
 
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar-fill {
-  background: #722F37 !important;
+  background: #753533 !important;
   height: 3px;
   top: 2px;
 }
@@ -994,7 +994,7 @@ ul {
   transform: translateX(50%) translateY(-50%);
   width: 12px;
   height: 12px;
-  background: #722F37;
+  background: #753533;
   border-radius: 2rem;
   content: "";
   transition: 0.2s all ease-in-out;
@@ -1036,7 +1036,7 @@ ul {
   .swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch.active .switch-title {
     font-weight: 600;
     transform: translateX(50%) scale(1.5);
-    color: #722F37;
+    color: #753533;
     transition-delay: 0.1s;
   }
   .swiper-container-wrapper--timeline .swiper-pagination-custom .swiper-pagination-switch {
@@ -1102,6 +1102,12 @@ ul {
     }
     .container{
         height: 60px;
+    }
+    .hero-texting{
+        display: none !important;
+    }
+    .date{
+         display: none;
     }
     .close-icon{
         display: inline-flex;
@@ -1195,15 +1201,16 @@ ul {
     .carousel .list .item .content .title{
         font-weight: bold;
         font-size: 1rem;
-        color: #722F37;
+        color: #753533;
     }
     .carousel .list .item .content .backinfo{
         font-weight: bold;
         font-size: 0.8rem;
-        color: #722F37;
+        color: #753533;
     }
     .carousel-container{
         width: 100%; 
+        margin-top: 2rem;
         height: 450px;
     }
     .carousel{
