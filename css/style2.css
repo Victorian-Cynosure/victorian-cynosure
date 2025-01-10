@@ -12,14 +12,6 @@
     font-display: swap;
 }
 
-
-@font-face {
-    font-family: "Noto Serif TC", serif;
-    src: url('../fonts/wenzengming.TTF') format('truetype');  /* 使用 TTF 格式 */
-    font-weight: normal;
-    font-style: normal;
-}
-
 @font-face {
     font-family: 'DFHei';
     src: url('../fonts/tsuhei.ttc');  /* 使用華康粗黑體 */
@@ -570,17 +562,18 @@ ul {
 .item .front h1 {
     font-family: "Noto Serif TC", serif;
     font-size: 2.15rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #d5d2c3;
 }
 .item2 .front h1{
     font-family: "Noto Serif TC", serif;
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #d5d2c3;
 }
 .item .front p {
     font-family: "Noto Serif TC", serif;
+    font-weight: 500;
     font-size: 1.15rem;
     color: #fff;
 }
@@ -605,6 +598,7 @@ ul {
 }
 .item2 .front p{
     font-family: "Noto Serif TC", serif;
+    font-weight: 500;
     font-size: 1.5rem;
     color: #fff;
 }
@@ -909,17 +903,18 @@ ul {
     .item .front h1 {
         font-family: "Noto Serif TC", serif;
         font-size: 1.5rem;
-        font-weight: bold;
+        font-weight: 700;
         color: #d5d2c3;
     }
     .item2 .front h1{
         font-family: "Noto Serif TC", serif;
         font-size: 1.5rem;
-        font-weight: bold;
+        font-weight: 700;
         color: #d5d2c3;
     }
     .item .front p {
         font-family: "Noto Serif TC", serif;
+        font-weight: 500;
         font-size: 0.85rem;
         color: #fff;
     }
@@ -945,6 +940,7 @@ ul {
     }
     .item2 .front p{
         font-family: "Noto Serif TC", serif;
+        font-weight: 500;
         font-size: 0.8rem;
         color: #fff;
     }
