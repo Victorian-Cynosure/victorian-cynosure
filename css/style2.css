@@ -746,9 +746,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'DFMingW4', serif;
+    font-family: "Noto Serif TC", serif;
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 700;
     color: #5d4447;
     margin-bottom: 0.5em;
 }
