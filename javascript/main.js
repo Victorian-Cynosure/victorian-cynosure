@@ -171,7 +171,7 @@ progress.onchange=function(){
   logoImg.classList.add('logo-spin');
 }
 const handleMediaQuery = () => {
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  const mediaQuery = window.matchMedia('(max-width: 992px)');
   function handleScreenChange(e) {
     if (e.matches) {
       // Force stop everything when on mobile
@@ -214,7 +214,7 @@ const initializeAudio = () => {
   
   const playAudio = () => {
     // Check if we're on mobile before playing
-    if (!window.matchMedia('(max-width: 768px)').matches) {
+    if (!window.matchMedia('(max-width: 992px)').matches) {
       song.play()
         .then(() => {
           isPlayingmusic = true;
