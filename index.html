@@ -42,7 +42,7 @@
                     <div class="control-music">
                         <div class="information">
                             <div class="music-animation" id="music-animation"></div>
-                            <h1>song name</h1>
+                            <h1 class="song-title">霧都光影</h1>
                         </div>
                         <div class="timebar">
                             <audio id="song">
@@ -92,13 +92,15 @@
                         <li class="search-item">
                             <div class="search">
                                 <dotlottie-player 
-                                id="search-icon"
-                                class="search-icon"
-                                src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
-                                background="transparent" 
-                                speed="1" 
-                                ></dotlottie-player>
-                                <input class="search_input" type="text" placeholder="search.">
+                                        id="search-icon"
+                                        class="search-icon"
+                                        src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
+                                        background="transparent" 
+                                        speed="1">
+                                    </dotlottie-player>
+                                <form id="searchForm" action="search.html" method="GET"> <!-- 將搜尋表單指向新的搜尋結果頁面 -->
+                                    <input class="search_input" type="text" name="query" placeholder="搜尋..." required>
+                                </form>
                             </div>
                         </li>
                     </ul>
@@ -130,7 +132,18 @@
         <div class="carousel">
             <div class="list">
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic2.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic3.jpg" alt="">
+                    <div class="content">
+                        <div class="title">
+                            💎｜𝐕𝐢𝐜𝐭𝐨𝐫𝐢𝐚𝐧 𝕮𝖞𝖓𝖔𝖘𝖚𝖗𝖊ㅣ𝟏𝟖𝟓𝟏 薇時溯光  ——高二聯合自主學習成果發表
+                        </div>
+                        <div class="backinfo">
+                            📖｜ 啊，一個多麼美好的年代。蒸汽船來往歐陸與遠東，棉花、茶葉、香料帶來無盡的財富。在霧與煤氣的城市，打一場板球，還是看一場歌劇？無可否認的，工業革命深深地改變這座城市，煤氣、蒸汽、鋼鐵的發展,使帝都愈加繁榮。這是帝國的繁榮，是日不落的巔峰。
+                        </div>                
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/victorian-cynosure/images/backpic4.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             💎｜𝐕𝐢𝐜𝐭𝐨𝐫𝐢𝐚𝐧 𝕮𝖞𝖓𝖔𝖘𝖚𝖗𝖊ㅣ𝟏𝟖𝟓𝟏 薇時溯光  ——高二聯合自主學習成果發表
@@ -140,9 +153,8 @@
                         </div>                
                     </div>
                 </div>
-               
                 <div class="item">
-                    <img src="/victorian-cynosure/images/S__3883015_0.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic3.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             💎｜𝐕𝐢𝐜𝐭𝐨𝐫𝐢𝐚𝐧 𝕮𝖞𝖓𝖔𝖘𝖚𝖗𝖊ㅣ𝟏𝟖𝟓𝟏 薇時溯光  ——高二聯合自主學習成果發表
@@ -153,7 +165,7 @@
                 </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic4.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             主題介紹
@@ -166,7 +178,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic3.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             理念介紹
@@ -179,7 +191,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic4.jpg" alt="">
                     <did class="content">
                         <div class="title">
                             成發介紹
@@ -193,24 +205,25 @@
                 </div>
             </div>
             <div class="thumbnail">
+                
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic2.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic4.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            背景介紹-1
+                            蒸氣之曦-2
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/S__3883015_0.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic3.jpg" alt="">
                     <div class="content">
                         <div class="title">
-                            背景介紹-2
+                            暮光軼聞
                         </div>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic4.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             主題介紹
@@ -218,7 +231,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic3.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             理念介紹
@@ -226,11 +239,19 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="/victorian-cynosure/images/backpic.jpg" alt="">
+                    <img src="/victorian-cynosure/images/backpic4.jpg" alt="">
                     <div class="content">
                         <div class="title">
                             成發介紹
                         </div>                 
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/victorian-cynosure/images/backpic3.jpg" alt="">
+                    <div class="content">
+                        <div class="title">
+                            蒸氣之曦-1
+                        </div>
                     </div>
                 </div>
             </div>

@@ -87,13 +87,15 @@
                     <li class="search-item">
                         <div class="search">
                             <dotlottie-player 
-                            id="search-icon"
-                            class="search-icon"
-                            src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
-                            background="transparent" 
-                            speed="1" 
-                            ></dotlottie-player>
-                            <input class="search_input" type="text" placeholder="search.">
+                                    id="search-icon"
+                                    class="search-icon"
+                                    src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
+                                    background="transparent" 
+                                    speed="1">
+                                </dotlottie-player>
+                            <form id="searchForm" action="search.html" method="GET"> <!-- 將搜尋表單指向新的搜尋結果頁面 -->
+                                <input class="search_input" type="text" name="query" placeholder="搜尋..." required>
+                            </form>
                         </div>
                     </li>
                 </ul>
