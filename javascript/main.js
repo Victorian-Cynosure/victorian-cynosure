@@ -111,7 +111,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     youtubeanimation.play(); 
   });
   youtubeContainer.addEventListener('click', () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley');
+    window.open('https://www.youtube.com/@VictorianCynosure1851');
   });
   youtubeContainer.addEventListener('mouseleave', () => {
     youtubeanimation.stop(); 
@@ -171,7 +171,7 @@ progress.onchange=function(){
   logoImg.classList.add('logo-spin');
 }
 const handleMediaQuery = () => {
-  const mediaQuery = window.matchMedia('(max-width: 992px)');
+  const mediaQuery = window.matchMedia('(max-width: 1024px)');
   function handleScreenChange(e) {
     if (e.matches) {
       // Force stop everything when on mobile
@@ -214,7 +214,7 @@ const initializeAudio = () => {
   
   const playAudio = () => {
     // Check if we're on mobile before playing
-    if (!window.matchMedia('(max-width: 992px)').matches) {
+    if (!window.matchMedia('(max-width: 1024px)').matches) {
       song.play()
         .then(() => {
           isPlayingmusic = true;

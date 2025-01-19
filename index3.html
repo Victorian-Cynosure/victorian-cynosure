@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自主學習成發</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chango&family=Potta+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a3471e79bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+    <nav class="navbar bg-yellow" id="nav">
+        <div class="container">
+            <div class="logo">
+                <img src="../victorian-cynosure/images/logo.png" alt="" class="logo-img">
+                <div class="control-music">
+                    <div class="information">
+                        <div class="music-animation" id="music-animation"></div>
+                        <h1>霧都光影</h1>
+                    </div>
+                    <div class="timebar">
+                        <audio id="song">
+                            <source src="../victorian-cynosure/media/Piano cover 3.m4a" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="close-icon">
+                <i class='bx bx-menu' id="menu-list"></i>
+                <i class='bx bx-x' id="close-menu" ></i>
+            </label>
+            <div class="main-menu">
+                <ul class="dropdown-container">
+                    <li>
+                       <div class="dropdown">
+                        <a href="index.html#nav" class="dropbtn">首頁</a>
+                            <div class="dropdown-content">
+                                <a href="index.html#background">背景介紹</a>
+                                <a href="index.html#timeline">時程表</a>
+                           </div>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="index2.html#nav" class="dropbtn">名單</a>
+                                <div class="dropdown-content">
+                                    <a href="index2.html#perform">報告組名單</a>
+                                    <a href="index2.html#stall">攤位組名單</a>
+                                    <a href="#timetable">海報組名單</a>
+                                    <a href="index2.html#staff">工作人員名單</a>
+                               </div>
+                           </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href=" " class="dropbtn">其他</a>
+                                <div class="dropdown-content">
+                                    <a href="index3.html#book">手冊</a>
+                                    <a href="index3.html#teacher" class="">導師感言</a>
+                                <div>
+                        </div>
+                     </li>
+                    <li>
+                        <div id="instagram-animation" class="instagram-animation menu-icon">
+                            <a href="https://www.instagram.com/victorian_cynosure/"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="youtube-animation" class="youtube-animation menu-icon">
+                            <a href="https://www.youtube.com/@VictorianCynosure1851"></a>
+                        </div>
+                    </li>
+                    <li class="search-item">
+                        <div class="search">
+                            <dotlottie-player 
+                                    id="search-icon"
+                                    class="search-icon"
+                                    src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
+                                    background="transparent" 
+                                    speed="1">
+                                </dotlottie-player>
+                            <form id="searchForm" action="search.html" method="GET"> <!-- 將搜尋表單指向新的搜尋結果頁面 -->
+                                <input class="search_input" type="text" name="query" placeholder="搜尋..." required>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="book-container">
+            <button id="prev" class="btn"><</button>
+            
+            <div id="book">
+                <!-- 頁面會透過 JavaScript 動態載入 -->
+            </div>
+        
+            <button id="next" class="btn">></button>
+    </div>
+    <div class="stack-area" id="teacher">
+        <div class="stack-item">
+                <div class="card">
+                    <img src="/victorian-cynosure/images/flags/jia.jpg" alt="">
+                    <div class="card-content">
+                        <p>
+                        從數學的角度來看，學習是一個不斷累積和進步的過程。就像數學中的數列，每一步都是在前一步的基礎上建立的。每一次的努力和進步，都像是在為你的人生建立一個穩固的數學模型。
+
+                        1. **小步驟，大成就**：就像解題時需要拆解複雜的問題，學習也是如此。每一個小的進步，都是朝著更大目標的踏腳石。
+
+                        2. **成就與反思**：在數學中，錯誤和失敗是重要的學習機會。每一次的失誤，都是一個反思的過程，能讓你更好地理解和解決未來的問題。
+
+                        3. **持之以恆的努力**：數學公式和定理是建立在長時間的推導和驗證之上的。持續的努力會讓你在學習上獲得回報。
+
+                        4. **探索與好奇心**：數學的魅力在於探索未知的領域。鼓勵學生保持好奇心，勇於挑戰困難，尋找自己的解法。
+
+                        5. **團隊合作的力量**：像證明定理一樣，很多時候通過討論和合作可以獲得新的見解和解決方案。合力使問題變得更加簡單。
+
+                        相信你們的努力會逐步構建美好的成果，就像數學中的每一個公式，都是精心打造的智慧結晶！
+                        </p>
+                    </div>            
+                </div>
+            <div class="card">
+                <img src="/victorian-cynosure/images/flags/yi.jpg" alt="">
+                <div class="card-content">
+                    <p>
+                        世界就像一本無限精彩的地理書，每一頁都蘊藏著不同的風景與故事。山川河流告訴我們堅持的力量，大海教會我們包容與深邃，而沙漠則啟發我們在艱難中尋找希望。地圖上的每一個角落，都提醒著我們，學習如同探索世界一樣，無盡而豐富。當你遇到困難時，想想高山如何歷經千百年的風雨仍屹立不倒；當你感到迷茫時，像河流一樣，勇敢向前，最終總能找到自己的方向。用地理的眼光看待人生，你會發現每一次挑戰都是一次新的旅程，每一段學習都是踏向更廣闊世界的腳步。相信自己，因為你是這片屬於自己的世界的冒險家❤️
+                    </p>
+                </div>
+              </div>
+            <div class="card">
+                <img src="/victorian-cynosure/images/flags/bing.jpg" alt="">
+                <div class="card-content">
+                    <p>
+                        青春是探索未知的最佳時機，而自主學習則是開啟這場冒險的鑰匙。在這片屬於青春的舞台上，你們主動挑選感興趣的方向，挖掘自己的潛能，這不僅是一種能力的培養，更是面向未來的一種積極態度。
+                        自主學習就像為人生的航行擬定地圖，每一條航線，都是通往未知與廣闊的起點。無論是深入書本的探索，還是親身實踐的體驗，每一段旅程都讓你們更加理解自己，也更加了解這個多元的世界。每一次的努力，都是一次跨越自我邊界的成長；每一次的選擇，都是一次與未知世界的深情對話。
+                        懷抱對知識的渴望，你們正展翅翱翔，在廣闊的天空中書寫屬於自己的華麗篇章。願你們的青春如初升的朝陽般耀眼，人生如雨後的彩虹般絢麗。展開羽翼，在無垠的蒼穹之下，追逐屬於自己的無限可能！
+                    </p>
+                </div>
+              </div>
+            <div class="card">
+                <img src="/victorian-cynosure/images/flags/ding.jpg" alt="">
+                <div class="card-content">
+                    <p>
+                        物理是一門充滿規律與邏輯的科學，而這些規律不僅適用於物理世界，也能在我們的自主學習的過程中提供指引。
+                        1. 慣性定律（牛頓第一定律）： 慣性定律告訴我們，如果一個物體沒有受外力作用，它將保持靜止或等速直線運動。這對你們的學習有著深刻的啟示。開始學習有時最困難的部分就是啟動，一旦開始，學習會自然而然地進行。因此，要勇於開啟每一個新的學習挑戰，突破初期的“慣性”！
+                        2. 加速度與努力（牛頓第二定律）： 牛頓第二定律告訴我們，加速度與物體所受的外力成正比，與物體的質量成反比。對學習來說，這就像是你們付出的努力（外力）與學習的成果（加速度）之間的關係。學習的速度與成效，往往取決於你們願意投入多少努力，而持之以恆的努力會讓你們獲得更大的進步。
+                        3. 波動與學習的節奏： 波動現象告訴我們，能量是周期性變化的，這和學習的節奏十分相似。學習並非一蹴而就，而是需要有規律的波動。在學習的過程中，會有起伏，有高峰也有低谷，但只要保持穩定的節奏，持續努力，最終會克服困難，達到學習的頂峰。
+                        希望你們能始終保持學習的動力和熱情，勇於挑戰自我，不斷成長。記住：當你們投入心力，掌握了其中的規律，將會發現學習的樂趣與成就感。
+                        加油，同學們！
+                    </p>
+                </div>
+            </div>  
+            <div class="card">
+                <img src="/victorian-cynosure/images/flags/wu.jpg" alt="">
+                <div class="card-content">
+                    <p>
+                        1851年，英國倫敦舉辦萬國博覽會，其主題「Cynosure」象徵光芒四射的中心，代表全球科技、藝術和文化的匯聚，也激發了當時對創新與進步的渴望。2025年，循著這樣的思維浪潮來到兩個世紀後的薇閣中學，與萬國博覽會相仿，同樣聚集最頂尖優秀的濟濟人才，同樣擁有對知識的探求與熱情，不同的是，他們是一群17歲的高二生，在最青澀的年紀，挑戰以更具創意的方式呈現自我。
+
+                        這場新世紀博覽會，高二孩子們將在作品中展現對未來的好奇(Curiosity)與對知識的渴望（Yearning），並以新穎性（Novelty）作為活動的亮點。回顧長達一年的自主學習過程，事前充分的準備，再遇上最棒的世代與優秀的同儕，這般機遇（Opportunity）獨一無二，無可再期，因而每一個作品都歷經孩子們創意的碰撞，靈感的發想，點燃無數火花（Spark），激發無限的可能與想像。
+                        
+                        籌備過程中，孩子們除了善用自身的獨特性（Uniqueness），將多元觀點與學習經歷融合成優異成果，更讓人驕傲的是，當關卡接踵而至，他們以其旺盛的企圖心及無與倫比的韌性（Resilience），迎面直擊，跨越難題，將自身凝聚成卓越與優秀（Excellence）的代名詞。也因此，即便這一路陪伴著孩子們走過從無到有的自主學習建構，並開始放手讓孩子們自主規劃並承擔籌辦大型活動的重責大任，過程中抑或跌宕起伏，抑或耗費心力，終滋養成喜悅與驕傲的花朵，在彼此的心中盛放！
+                        
+                        歡迎大家一同見證高二孩子們在專業學習路上充滿驚喜的Serendipity，也邀請您們一同認識這群循循善誘，竭盡心力引導孩子們的高二導師以及全心全意帶領同儕們邁入卓越Excellence追求共好的高二各班成發團隊，一起享受這場專屬薇閣的新世紀的「CYNOSURE」自主學習成果發表會。
+                        
+                        Together, we embrace serendipity and strive for excellence!
+                    </p>
+                </div>
+            </div>      
+            <div class="card">
+                <img src="/victorian-cynosure/images/flags/ji.jpg" alt="">
+                <div class="card-content">
+                    <p>
+                    如果人生是一條湍急水流下的幽谷，那麼這屆的孩子都是一個個的鵝卵石，有的會在時光淬鍊裡更加圓滑，有的會顯示出他們原本更加細緻的質地，更有許多可以閃爍連陽光都羨慕的光芒。我常思考如何在108課綱之後提升孩子學習的興趣與批判思考能力，將許多天馬行空的想像結合實務呈現出來。在這次的成果發表會中結合實驗課程、口語表達以及攤位的擺設，每個孩子都投入了時間與精力，從事資料的收集與研究，以期能夠在發表時流暢地分享自己的研究成果。並在潛移默化中體會到團隊合作的重要、科學不是冰冷的數據與公式，而是一種探索世界的熱情。此次發表會有不同的科目跨學科合作，更有許多結合AI與生物等未來的探究，呈現出科學與生活之間密切的關聯。或許在這場發表結束之後，他們即將面對另一場升學的試煉，但我相信正如作家席慕蓉所說「走得最急的都是最美的事物」，當我們在日後重新回想起這一次的發表會，我們會覺得這是一段學習生涯中最精采也是最美的一段青春，我期待著。
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/victorian-cynosure/images/flags/xin.jpg" alt="">
+                <div class="card-content">
+                    <p>
+                        孩子們，
+                        無論你身處何種環境，也無論你要面對多艱辛的挑戰，
+                        都要堅守你的尊嚴與信念。
+                        你或許覺得自己很平凡，
+                        但那份堅韌與真誠，將是你最珍貴的力量。
+                        簡·愛一書中告訴我們，
+                        真正的價值不是來自外在的條件，
+                        而是來自內心的勇氣與智慧。
+                        現在的你不僅是一位學生，
+                        更是一位未來的創造者。
+                        用你的筆，用你的心，去寫下屬於你的獨特篇章。
+                        努力求學問，擴展你的視野，鍛鍊你的思想，培養解決問題的能力，
+                        因為知識是一種無可取代的自由。
+                        在這條旅程中，別忘了愛自己，尊重自己。
+                        學習的道路可能崎嶇，但當你勇敢直視困難，內心便會變得更加強大。
+                        無論世界如何評價你，請相信，你要勇敢去追求自己的夢想，
+                        改變自己命運的魔法掌握在你手中。
+                    </p>
+                </div>
+            </div>    
+            </div>
+        </div>
+    <script src="/javascript/main2.js"></script>
+</body>
+</html>

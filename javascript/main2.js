@@ -103,7 +103,7 @@ document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     youtubeanimation.play(); 
   });
   youtubeContainer.addEventListener('click', () => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley');
+    window.open('https://www.youtube.com/@VictorianCynosure1851');
   });
   youtubeContainer.addEventListener('mouseleave', () => {
     youtubeanimation.stop(); 
@@ -163,7 +163,7 @@ progress.onchange=function(){
   logoImg.classList.add('logo-spin');
 }
 const handleMediaQuery = () => {
-  const mediaQuery = window.matchMedia('(max-width: 992px)');
+  const mediaQuery = window.matchMedia('(max-width: 1024px)');
   function handleScreenChange(e) {
     if (e.matches) {
       // Force stop everything when on mobile
@@ -206,7 +206,7 @@ const initializeAudio = () => {
   
   const playAudio = () => {
     // Check if we're on mobile before playing
-    if (!window.matchMedia('(max-width: 992px)').matches) {
+    if (!window.matchMedia('(max-width: 1024px)').matches) {
       song.play()
         .then(() => {
           isPlayingmusic = true;
@@ -307,3 +307,174 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeSlider('.slider1','item', 'next1', 'prev1');  // First slider
   initializeSlider('.slider3','item2', 'next2', 'prev2');  // Second slider
 });
+$(document).ready(function () {
+  // 載入書本頁面
+  function loadBook() {
+      for (let i = 1; i <= 33; i++) {
+          $('#book').append(`
+              <div class="page ${i === 1 ? 'hard' : ''}">
+                  <img src="/victorian-cynosure/book/自主成發小冊6_page_${i}.jpg" 
+                       alt="第 ${i} 頁"
+                       style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+          `);
+      }
+
+      // 檢查螢幕寬度並設置適當的顯示模式
+      function initializeBook() {
+          const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+          
+          $('#book').turn({
+              display: isMobile ? 'single' : 'double', // 手機單頁，電腦雙頁
+              acceleration: true,
+              gradients: true,
+              elevation: 0,
+              autoCenter: true,
+              separation: 0,
+              duration: 600,
+              corners: 'all',
+              cornerSize: 200,
+              allowTouchMove: true,
+              when: {
+                  turning: function(e, page, view) {
+                      console.log(`翻頁到: ${page}`);
+                  },
+                  start: function(e, pageObject, corner) {
+                      if (corner) {
+                          $(this).turn('stop');
+                      }
+                  }
+              }
+          });
+      }
+
+      // 初始化書本
+      initializeBook();
+
+      // 監聽視窗大小變化
+      $(window).on('resize', function() {
+          // 銷毀現有的 turn.js 實例
+          $('#book').turn('destroy');
+          // 重新初始化
+          initializeBook();
+      });
+
+      let isDragging = false;
+      let startX = 0;
+
+      $('#book').on('mousedown', function (e) {
+          isDragging = true;
+          startX = e.pageX;
+          e.preventDefault();
+      });
+
+      $(document).on('mousemove', function (e) {
+          if (!isDragging) return;
+
+          let deltaX = e.pageX - startX;
+          if (Math.abs(deltaX) > 50) {
+              if (deltaX > 0) {
+                  $('#book').turn('previous');
+              } else {
+                  $('#book').turn('next');
+              }
+              isDragging = false;
+          }
+      });
+
+      $(document).on('mouseup', function () {
+          isDragging = false;
+      });
+  }
+
+  loadBook();
+
+  // 綁定按鈕事件
+  $('#prev').click(function () {
+      $('#book').turn('previous');
+  });
+
+  $('#next').click(function () {
+      $('#book').turn('next');
+  });
+
+  // 支援鍵盤左右鍵翻頁
+  $(document).keydown(function (e) {
+      if (e.keyCode == 37) {
+          $('#book').turn('previous');
+      } else if (e.keyCode == 39) {
+          $('#book').turn('next');
+      }
+  });
+
+  // 改進觸控支援
+  $(window).on('touchstart', function (e) {
+      var touch = e.originalEvent.touches[0];
+      var x = touch.pageX;
+      var width = $(window).width();
+
+      if (x < width / 2) {
+          $('#book').turn('previous');
+      } else {
+          $('#book').turn('next');
+      }
+      e.preventDefault();
+  });
+});
+
+let cards = document.querySelectorAll(".card");
+let content = document.querySelectorAll(".card-content");
+let stackArea = document.querySelector(".stack-area");
+
+function rotateCards() {
+  let angleStep = 1;
+  let angle = 0;
+  cards.forEach((card, index) => {
+    if (card.classList.contains("away")) {
+      card.style.transform = `translateY(-120vh) rotate(-48deg)`;
+    } else {
+      card.style.transform = `rotate(${angle}deg)`;
+      angle -= angleStep;
+      card.style.zIndex = cards.length - index;
+    }
+  });
+}
+
+rotateCards();
+
+let throttleTimer;
+window.addEventListener("scroll", () => {
+  if (!throttleTimer) {
+    throttleTimer = setTimeout(() => {
+      handleScroll();
+      throttleTimer = null;
+    }, 50);
+  }
+});
+
+function handleScroll() {
+  let distance = window.innerHeight * 0.5;
+  let topVal = stackArea.getBoundingClientRect().top;
+
+  let index = -1 * (topVal / distance + 1);
+  index = Math.floor(index);
+  
+  if (index >= -1 && index + 1 < content.length) {
+    content[index + 1].style.opacity = "1";
+  }
+  content.forEach((item, idx) => {
+    if (idx === index + 1) {
+      item.style.opacity = "1"; // 显示当前内容
+    } else {
+      item.style.opacity = "0"; // 隐藏其他内容
+    }
+  });
+  for (let i = 0; i < cards.length; i++) {
+    if (i <= index) {
+      cards[i].classList.add("away");
+    } else {
+      cards[i].classList.remove("away");
+    }
+  }
+  rotateCards();
+}
