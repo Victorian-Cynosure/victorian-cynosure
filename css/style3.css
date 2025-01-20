@@ -111,7 +111,6 @@ main{
 }
 .information{
     display: flex;
-    color: #fff;
 }
 #progress{
     border: solid 2px #fff;
@@ -147,7 +146,7 @@ main{
     /* flex-wrap: wrap; */
     max-width: 1100px;
     margin: auto;
-    padding: 0 0.2rem;
+    padding: 0 0.5rem;
 }
 
 .navbar .logo img {
@@ -351,314 +350,201 @@ main{
     height: 50px;
     cursor: pointer;
 }
-.container {
-    display: flex !important;
+/* slider */
+.slider-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(3, 15, 31);
+    background-image: radial-gradient(
+        circle at top center,
+        rgb(24,48,107) 0%,
+        rgb(3,15,31) 70%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1;  
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    gap: 20px;
-}
-
-#book {
-    width: 1200px;
-    height: 800px;
-    background-color: #f5f5f5;
-    transform-origin: center center;
-    cursor: pointer; /* 指針效果 */
-    touch-action: none; /* 禁用預設觸控行為 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 增加陰影 */
-}
-
-#prev,#next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
-
-.page {
-    background-color: white;
-    padding: 0;
+    padding: 50px 0;
     overflow: hidden;
-    transform-origin: 50% 50%;
-    cursor: pointer; /* 指針效果 */
-    margin: 0 !important; /* 移除可能的間距 */
-    border: none !important; /* 移除邊框 */
 }
-
-.page img {
+.slide{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    aspect-ratio: 3/4;
+    border-radius: 20px;
+    transition: all 0.8s ease;
+    pointer-events: none;
+    user-select: none;
+}
+.slide.active{
+    box-shadow: 10px 10px 50px 0 rgba(60,60,66,0.6);
+}
+.slide::after{
+    content="";
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 確保圖片填滿 */
-    display: block;
-    margin: 0; /* 移除外邊距 */
+    background: rgba(85, 86, 91, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgb(255,225,225,0.3);
+    border-radius: inherit;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.slide.active::after{
+    opacity: 1;
+}
+.slide img{
+    border-radius: inherit;
+    border: 4px solid rgb(255,225,225,0.3);
 }
 
-.hard {
-    background: none;
-    color: inherit;
+.slide p{
+    position: absolute;
+    color: #000;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: translateY(0);
+    z-index: 2;
+    opacity: 1;
 }
-
-#book .turn-page {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    background-color: white;
+.slide.active p{
+    animation: popup 0.8s ease-in-out forwards;
 }
-
-/* 添加翻頁時的視覺提示 */
-.page.p-corner {
-    transition: all 0.3s ease-in-out;
-}
-@media screen and (max-width: 768px) {
-    #book {
-        width: 90vw;  /* 視窗寬度的90% */
-        height: 120vw; /* 保持適當的長寬比 */
-        margin: 0 auto;
+@keyframes popup{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
     }
-
-    .container {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    #prev {
-        left: 10px;
-    }
-
-    #next {
-        right: 10px;
+    100%{
+        transform:  translateY(-20px);
+        opacity: 1;
     }
 }
-@media screen and (max-width: 992px) {
-    .popup-overlay {
-      display: none !important;  /* Force hide the overlay */
+.control{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    aspect-ratio: 1/1;
+    font-size: 2.25rem;
+    color: #6cfa84;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: transparent;
+    background-image: radial-gradient(
+        50% 115% at 50% -5%,
+        rgba(225,225,225,0.11) 0%,
+        transparent 100%
+    );
+    box-shadow: inset 0 0 10px 0 rgba(225,225,225,0.15),
+    inset 0 5px 10px 0 rgba(225,225,225,0.1),
+    inset 0 2px 5px 0 rgba(225,225,225,0.4),
+    inset 0 3px 20px 0 rgba(0,0,0,0.25);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    animation: changecolor 2s ease-in infinite,changesize 1.5s linear;
+    will-change: transform;
+}
+@keyframes changecolor{
+    0%,100%{
+        color: #6cfa84;
     }
-    
-    /* If you also want to hide the container */
-    .popup-container {
-      display: none !important;
-    }
-    .control-music{
-        display: none !important;
-    }
-    .search-item{
-        display: none !important;
-    }
-  }
-@media (max-width:768px){
-    .navbar{
-        overflow: visible;
-        padding: 0px;
-    }
-    .logo{
-        margin-left: 0;
-        margin-right: auto;
-    }
-    #check:checked~.close-icon #menu-list{
-        display: none;
-    }
-    #check:checked~.close-icon #close-menu{
-        display:block !important;
-    }
-    .navbar ul li a {
-        padding: 0rem ;
-    }
-    .navbar .logo img {
-        width: 40px !important;
-        height: auto;
-    }
-    .container{
-        height: 60px;
-    }
-    .close-icon{
-        display: inline-flex;
-    }
-    .dropbtn{
-        padding: 0 !important;
-        margin: 0;
-        text-align: start !important;
-        height: auto;
-        width: auto;
-        background-color: transparent !important; 
-    }
-    .dropbtn:hover{
-        transform: none !important; 
-    }
-    .dropbtn:hover::before {
-        left: 0;
-        transform: none !important; 
-        width: 100%; 
-    }
-    .dropbtn::before{
-        left: 0 !important;
-        transform: none !important;
-    }
-    .main-menu{
-        position: absolute;
-        top:60px;
-        left: 0;
-        width: 100%;
-        height: 0rem;
-        background: rgba(114, 47, 55, 0.8); 
-        backdrop-filter: blur(50px) !important;
-        -webkit-backdrop-filter: blur(50px);
-        z-index: 1000;
-        overflow: hidden;
-        transition: .3s ease;
-    }
-    .close-icon #close-menu{
-        display: none;
-    }
-    #check:checked~.main-menu{
-        height: 16.25rem;
-        overflow: visible;
-    }
-    .main-menu ul{
-        padding: 5px;
-        display: block !important;
-        
-    }
-    .main-menu ul li{
-        margin: 1rem 0.5em !important;
-    }
-    .text-xxl{
-        margin-top: 0.25em;
-        font-size: clamp(3rem, 8vw, 4rem);
-        height: 100px !important;
-        width: auto;
-    }
-    .hero-texting{
-        font-size: clamp(3rem, 8vw, 4rem);
-    }
-    .hero .container{
-        min-height: 150px;
-        padding: 0;
-    }
-    .hero-content{
-        height: 150px;
-        padding: 0;
-    }
-    #instagram-animation {
-        width: 50px;
-        height: 50px;
-    }
-    .main-menu ul li:nth-child(4),
-    .main-menu ul li:nth-child(5) {
-    display: inline-block;
-    margin-right: 1rem; /* Space between icons */
+    50%{
+        color: #a9aabc;
     }
 }
-@media screen and (768px<=width<=1024px){
-    .navbar{
-        overflow: visible;
-        padding: 10px;
+@keyframes changesize{
+    0%,100%{
+        transform:  translateY(-50%) scale(1);
     }
-    .logo{
-        width: 60px;
-        height: 60px;
-        margin-left: 0;
-        margin-right: auto;
+    50%{
+        transform:  translateY(-50%) scale(1.1);
     }
-    #check:checked~.close-icon #menu-list{
-        display: none;
+}
+.control:hover{
+    background-color: rgba(225,225,225,0.05);
+    animation: none;
+}
+
+.control.prev{
+    left: 25%;
+    transform: rotate(0deg) translateY(-50%) scale(1);
+}
+.control.next{
+    right: 25%;
+    transform: rotate(0deg) translateY(-50%) scale(1);
+}
+
+.control.prev:not([disabled]):hover{
+    transform: rotate(-15deg) translateY(-50%) scale(1.2);
+}
+
+.control.next:not([disabled]):hover{
+    transform: rotate(15deg) translateY(-50%) scale(1.2);
+}
+.control.prev:is([disabled]),
+.control.next:is([disabled]){
+    animation: none;
+}
+
+@media (max-width:980px){
+    .slide p{
+        font-size: 1.5rem;
     }
-    #check:checked~.close-icon #close-menu{
-        display:block;
+    .control.prev{
+        left: 15%;
     }
-    .navbar ul li a {
-        padding: 0rem ;
+    .control.next{
+        right: 15%;
     }
-    .navbar .logo img {
-        width: 45px !important;
-        height: auto;
+}
+@media (max-width:700px){
+    .slide{
+        width: 260px;
     }
-    .close-icon{
-        top: 2%;
+    .slide p{
+        font-size: 1.25rem;
     }
-    .container{
-        height: 60px;
+    .control{
+        width: 40px;
+        font-size: 1.8rem;
     }
-    .close-icon{
-        display: inline-flex;
+}
+@media (max-width:560px){
+    .slide{
+        width: 220px;
     }
-    .dropbtn{
-        padding: 0 !important;
-        margin: 0;
-        text-align: start !important;
-        height: auto;
-        width: auto;
-        background-color: transparent !important; 
+    .slide p{
+        font-size: 1.1rem;
     }
-    .dropbtn:hover{
-        transform: none !important; 
+    .control{
+        font-size: 1.5rem;
     }
-    .dropbtn:hover::before {
-        left: 0;
-        transform: none !important; 
-        width: 100%; 
+    .control.prev{
+        left: 5%;
     }
-    .dropbtn::before{
-        left: 0 !important;
-        transform: none !important;
-    }
-    .main-menu{
-        position: absolute;
-        top:80px;
-        left: 0;
-        width: 100%;
-        height: 0rem;
-        background: rgba(114, 47, 55, 0.8); 
-        backdrop-filter: blur(50px) !important;
-        -webkit-backdrop-filter: blur(50px);
-        z-index: 1000;
-        overflow: hidden;
-        transition: .3s ease;
-    }
-    .close-icon #close-menu{
-        display: none;
-    }
-    #check:checked~.main-menu{
-        height: 16.25rem;
-        overflow: visible;
-    }
-    .main-menu ul{
-        padding: 5px;
-        display: block !important;
-        
-    }
-    .main-menu ul li{
-        margin: 1rem 0.5em !important;
-    }
-    .hero-content{
-        height: 150px;
-        padding: 0;
-    }
-    #instagram-animation {
-        width: 50px;
-        height: 50px;
-    }
-    .main-menu ul li:nth-child(4),
-    .main-menu ul li:nth-child(5) {
-    display: inline-block;
-    margin-right: 1rem; /* Space between icons */
+    .control.next{
+        right: 5%;
     }
 }
