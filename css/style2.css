@@ -457,7 +457,7 @@ ul {
 }
 
 /* Base slider styles */
-.slider1, .slider3 , .slider5{
+.slider1, .slider3 {
     position: relative;
     width: 100%;
     height: 700px;
@@ -500,30 +500,11 @@ ul {
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* Third slider items */
-.slider5 .item3 {
-    position: absolute;
-    width: 700px;
-    height: 600px;
-    text-align: justify;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 20px;
-    left: calc(50% - 350px); /* Adjusted for item3 width */
-    top: 0;
-    transform-style: preserve-3d;
-    transition: all 0.5s ease;
-    perspective: 1000px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
 /* Common front/back styles */
 .item .front,
 .item .back,
 .item2 .front,
-.item2 .back,
-.item3 .front,
-.item3 .back {
+.item2 .back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -537,8 +518,7 @@ ul {
 
 /* Front side layout */
 .item .front,
-.item2 .front,
-.item3 .front {
+.item2 .front {
     display: flex;
     flex-direction: column;
 }
@@ -554,15 +534,6 @@ ul {
     overflow: hidden; /* Changed from visible to hidden */
 }
 .item2 .frontimg {
-    margin-top: auto;
-    height: 335px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden; /* Changed from visible to hidden */
-}
-.item3 .frontimg {
     margin-top: auto;
     height: 335px;
     display: flex;
@@ -601,12 +572,6 @@ ul {
     font-weight: 700;
     color: #d5d2c3;
 }
-.item3 .front h1{
-    font-family: "Noto Serif TC", serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #d5d2c3;
-}
 .item .front p {
     font-family: "Noto Serif TC", serif;
     font-weight: 500;
@@ -632,30 +597,14 @@ ul {
     margin-bottom: -20px;
     margin-left: 330px;
 }
-.item3 .front .clickme{
-    display: flex;
-    justify-content: end;
-    font-family: 'DFRFeng';
-    font-size: 1.10rem;
-    color: #fff;
-    margin-bottom: -20px;
-    margin-left: 330px;
-}
 .item2 .front p{
     font-family: "Noto Serif TC", serif;
     font-weight: 500;
     font-size: 1.5rem;
     color: #fff;
 }
-.item3 .front p{
-    font-family: "Noto Serif TC", serif;
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: #fff;
-}
 .item .back,
-.item2 .back,
-.item3 .back {
+.item2 .back {
     transform: rotateY(180deg);
 }
 
@@ -691,19 +640,11 @@ ul {
     height: 520px;
 }
 
-.item3 .back img {
-    display: block;
-    border-radius: 10px;
-    width: 650px; /* Adjusted for larger item2 */
-    height: 520px;
-}
-
 .item.flipped,
-.item2.flipped,
-.item3.flipped {
+.item2.flipped {
     transform: rotateY(180deg) translateX(0);
 }
-#next1,#next2,#next3,#prev1,#prev2,#prev3{
+#next1,#next2,#prev1,#prev2{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -726,10 +667,6 @@ ul {
     left: 325px;
     top: 300px;
 }
-#prev3{
-    left: 325px;
-    top: 300px;
-}
 #next1{
     left: unset;
     top: 300px;
@@ -740,12 +677,7 @@ ul {
     top: 300px;
     right: 325px;
 }
-#next3{
-    left: unset;
-    top: 300px;
-    right: 325px;
-}
-#next1:hover,#next2:hover,#next3:hover, #prev1:hover,#prev2:hover,#prev3:hover {
+#next1:hover,#next2:hover, #prev1:hover,#prev2:hover {
     background-color: #f0f0f0;
     transform: translateY(-50%) scale(1.1);
 }
@@ -1113,86 +1045,6 @@ ul {
             transform: translateX(-100%);
         }
     }
-    #prev3{
-        position: absolute;
-        left: 5px;
-        top: 165px;
-        transform: none;
-    }
-    
-    #next3{
-        position: absolute;
-        right: 5px;
-        top: 165px;
-        transform: none;
-    }
-    
-    #next3,#prev3{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: transparent !important;
-        border: none;
-        cursor: pointer;
-        color: #f0f0f0;
-        font-size: 15px;
-        font-weight: bold;
-        z-index: 100;
-        transition: all 0.3s ease;
-    }
-    
-    .slider5 .item3 {
-        width: 350px;
-        height: 330px;
-        left: calc(50% - 175px);
-    }
-    
-    .item3 .front h1 {
-        font-family: "Noto Serif TC", serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #d5d2c3;
-    }
-    
-    .item3 .front p {
-        font-family: "Noto Serif TC", serif;
-        font-weight: 500;
-        font-size: 0.8rem;
-        color: #fff;
-    }
-    
-    .item3 .front .clickme{
-        display: flex;
-        justify-content: end;
-        font-family: 'DFRFeng';
-        font-size: 1.10rem;
-        color: #fff;
-        margin: 0;
-        margin-bottom: -15px;
-    }
-    
-    .item3 .back p {
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "DFMingW4";
-    }
-    
-    .item3 .back img {
-        display: block;
-        border-radius: 10px;
-        width: 320px;
-        height: 280px;
-    }
-    
-    .item3 .front,
-    .item3 .back {
-        padding: 15px;
-        border-radius: 20px;
-    }
 }
 @media screen and (768px<=width<=1024px){
     .navbar{
@@ -1443,76 +1295,6 @@ ul {
         100% {
             transform: translateX(-100%);
         }
-    }
-    #prev3{
-        left: 20px;
-        top: 250px;
-    }
-    #next3{
-        left: unset;
-        top: 250px;
-        right: 20px;
-    }
-    #next3,#prev3{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #fff;
-        border: none;
-        cursor: pointer;
-        font-size: 15px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        z-index: 100;
-        transition: all 0.3s ease;
-    }
-    .slider5 .item3 {
-        width: 600px;
-        height: 500px;
-        left: calc(50% - 300px);
-    }
-    .item3 .front h1{
-        font-family: "Noto Serif TC", serif;
-        font-size: 2rem;
-        font-weight: 700;
-        color: #d5d2c3;
-    }
-    .item3 .front p{
-        font-family: "Noto Serif TC", serif;
-        font-weight: 500;
-        font-size: 1.25rem;
-        color: #fff;
-    }
-    .item3 .front .clickme{
-        display: flex;
-        justify-content: end;
-        font-family: 'DFRFeng';
-        font-size: 1.10rem;
-        color: #fff;
-        margin: 0;
-        margin-bottom: -15px;
-    }
-    .item3 .back p {
-        color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "DFMingW4";
-    }
-    .item3 .back img {
-        display: block;
-        border-radius: 10px;
-        width: 560px;
-        height: 445px;
-    }
-    .item3 .front,
-    .item3 .back {
-        padding: 15px;
-        border-radius: 20px;
     }
 }
 .book-container {
