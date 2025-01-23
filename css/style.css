@@ -284,19 +284,20 @@ ul {
 }
 
 .hero-texting {
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 600px;
     padding: 1rem;
     padding-top: -100px;
     margin: 0 auto;
     display: flex;
+    margin-top: 28rem;
     justify-content: center;
     align-items: center;
     color: #4A1D21;
     font-size: clamp(2rem, 7vw, 2rem);
     font-weight: 700;
     font-family: Noto Serif TC, serif;  /* 改用文徵明體 */
-    background-color: #D4A9AF;
+    background-color: #d4a9afe6;
     text-align: center;
     border-radius: 15px;
     position: relative;
@@ -572,6 +573,22 @@ ul {
 .hidden {
     display: none;
 }
+.backinfod{
+    width: 70vw;
+    margin: auto;
+    margin-top: 8rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.backinfo{
+    display: flex;
+    justify-content: start;
+    font-size: large;
+    font-weight: bold;
+    color: #722;
+    font-family: "Noto Serif TC", serif;
+}
 #instagram-animation {
     width: 45px;
     height: 45px;
@@ -589,7 +606,7 @@ ul {
     justify-content: center;
     width: 100%;
     height: auto;
-    margin-top: 10rem;
+    margin-top: 2px;
     overflow: hidden;
 }
 .carousel{
@@ -599,7 +616,6 @@ ul {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 10px;
     position:relative;
     border-radius: 45px;
     border: solid 2px #753533;
@@ -1061,6 +1077,14 @@ ul {
     .hero-texting{
         display: none !important;
     }
+    .backinfod{
+
+        width: 90%;
+        margin-top: 3rem;
+    }
+    .backinfo{
+        font-size: 15px;
+    }
     .date{
          display: none;
     }
@@ -1148,6 +1172,9 @@ ul {
         margin:0 auto;
         font-size: clamp(1rem, 7vw, 1rem);
     }
+    .hero{
+        margin: 0;
+    }
     .carousel .list .item .content{
         top: 10%;
         padding-right: 0;
@@ -1163,13 +1190,14 @@ ul {
         color: #753533;
     }
     .carousel-container{
+        display: flex;
+        align-items: start;
         width: 100%; 
-        margin-top: 2rem;
         height: 450px;
     }
     .carousel{
         width: 90%;
-        height: 400px;
+        height:80%;
     }
     .thumbnail{
         position: absolute;
@@ -1344,6 +1372,9 @@ ul {
     .date{
         font-size: clamp(1rem, 4vw, 1.5rem);
     }
+    .backinfod{
+        margin-top:23rem;
+    }
     .hero-texting{
         margin:0 auto;
         font-size: clamp(2rem, 10vw, 2rem);
@@ -1363,8 +1394,9 @@ ul {
         color: #753533;
     }
     .carousel-container{
+        align-items: start;
         width: 100%; 
-        margin-top: 15rem;
+        margin-top: 0rem;
         height: 450px;
     }
     .carousel{

@@ -306,5 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   initializeSlider('.slider1','item', 'next1', 'prev1');  // First slider
   initializeSlider('.slider3','item2', 'next2', 'prev2');  // Second slider
+  initializeSlider('.slider5', 'item3', 'next3', 'prev3');  // Third slider (新增)
 });
 

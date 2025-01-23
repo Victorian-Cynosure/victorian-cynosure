@@ -501,29 +501,22 @@ ul {
 }
 
 /* Third slider items */
-.slider5 {
-    width: 100%;
-    max-width: 1200px;
-    height: 700px;
-    margin: auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
 
 .item3 {
     position: absolute;
-    width: 800px;
-    height: 700px;
-    left: calc(50% - 400px);
+    width: 700px;  /* 確保與 item2 一致 */
+    height: 600px; /* 確保與 item2 一致 */
+    text-align: justify;
+    background-color: #fff;
     border-radius: 20px;
     padding: 20px;
-    transform-origin: center;
-    transition: 0.5s;
-    cursor: pointer;
+    left: calc(50% - 350px); /* 確保居中 */
+    top: 0;
     transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
 .item3 .front,
@@ -757,12 +750,20 @@ ul {
     width: 650px; /* Adjusted for larger item2 */
     height: 520px;
 }
+.item3 .back img {
+    display: block;
+    border-radius: 10px;
+    width: 645px; /* Adjusted for larger item2 */
+    height: 540px;
+}
 
 .item.flipped,
 .item2.flipped,
 .item3.flipped {
     transform: rotateY(180deg) translateX(0);
 }
+
+
 #next1,#next2,#next3,#prev1,#prev2,#prev3{
     position: absolute;
     top: 50%;
@@ -779,31 +780,31 @@ ul {
     transition: all 0.3s ease;
 }
 #prev1{
-    left: 450px;
+    left: 30%;
     top: 300px;
 }
 #prev2{
-    left: 325px;
+    left: 20%;
     top: 300px;
 }
 #prev3{
-    left: 325px;
+    left: 20%;  /* 更靠近左邊緣 */
     top: 300px;
 }
 #next1{
     left: unset;
     top: 300px;
-    right: 450px;
+    right: 30%;
 }
 #next2{
     left: unset;
     top: 300px;
-    right: 325px;
+    right: 20%;  /* 更靠近右邊緣 */
 }
 #next3{
     left: unset;
     top: 300px;
-    right: 325px;
+    right: 20%;  /* 更靠近右邊緣 */
 }
 #next1:hover,#next2:hover,#next3:hover, #prev1:hover,#prev2:hover,#prev3:hover {
     background-color: #f0f0f0;
@@ -1115,7 +1116,7 @@ ul {
         padding: 15px;
         border-radius: 20px;
     }
-    #next1,#next2,#prev1,#prev2{
+    #next1,#next2,#next3,#prev1,#prev2,#prev3{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -1149,7 +1150,7 @@ ul {
         top: 165px;
         right: 5px;
     }
-    #next1:hover,#next2:hover, #prev1:hover,#prev2:hover {
+    #next1:hover,#next2:hover, #prev1:hover,#prev2:hover,#next3:hover,#prev3:hover {
         background-color: #f0f0f0;
         transform: translateY(-50%) scale(1.1);
     }
@@ -1174,31 +1175,15 @@ ul {
         }
     }
     #prev3{
-        position: absolute;
         left: 5px;
         top: 165px;
         transform: none;
     }
     
     #next3{
-        position: absolute;
         right: 5px;
         top: 165px;
         transform: none;
-    }
-    
-    #next3,#prev3{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: transparent !important;
-        border: none;
-        cursor: pointer;
-        color: #f0f0f0;
-        font-size: 15px;
-        font-weight: bold;
-        z-index: 100;
-        transition: all 0.3s ease;
     }
     
     .slider5 .item3 {
@@ -1451,7 +1436,7 @@ ul {
         padding: 15px;
         border-radius: 20px;
     }
-    #next1,#next2,#prev1,#prev2{
+    #next1,#next2,#prev1,#prev2,#next3,#prev3{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -1505,28 +1490,13 @@ ul {
         }
     }
     #prev3{
-        left: 20px;
+        left: 300px;
         top: 250px;
     }
     #next3{
         left: unset;
         top: 250px;
-        right: 20px;
-    }
-    #next3,#prev3{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #fff;
-        border: none;
-        cursor: pointer;
-        font-size: 15px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        z-index: 100;
-        transition: all 0.3s ease;
+        right: 300px;
     }
     .slider5 .item3 {
         width: 600px;
@@ -1683,7 +1653,7 @@ ul {
     display: flex;
   }
   .stack-item {
-    height: 50vh;
+    height: 40vh;
     flex-basis: 50%;
     position: sticky;
     top: 0;
@@ -1693,12 +1663,12 @@ ul {
     display: flex;
   }
   .card {
-    width: 1400px;
-    height: 1000px;
+    width: 95vw;
+    height: 170%;
     border-radius: 15px;
     position: absolute;
-    top: calc(30% - 230px);
-    left: calc(30% - 195px);
+    top: calc(30% );
+    left: calc(30%-100px );
     transform: translate(-50%, -50%);
     transition: 0.5s ease-in-out;
     display: flex;
@@ -1712,6 +1682,8 @@ ul {
     object-fit: contain;
   }
   .card-content{
+    width: 100%;
+    height: auto;
     margin: auto;
     padding-left: 100px;
     justify-content: center;
@@ -1726,32 +1698,3 @@ ul {
     transform-origin: bottom left;
   }
 
-#next3, #prev3 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 100;
-    transition: all 0.3s ease;
-}
-
-#next3:hover, #prev3:hover {
-    background-color: #753533;
-    color: #fff;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.item3:hover {
-    transform: scale(1.02);
-}
-
-.item3.flipped {
-    transform: rotateY(180deg);
-}
