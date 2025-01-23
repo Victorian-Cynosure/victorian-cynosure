@@ -5,7 +5,7 @@ $(document).ready(function() {
         for (let i = 1; i <= 33; i++) {
             $('#book').append(`
                 <div class="page ${i === 1 ? 'hard' : ''}">
-                    <img src="book/自主成發小冊-download_page_${i}.jpg" 
+                    <img src="book/自主成發小冊6_page_${i}.jpg" 
                          alt="第 ${i} 頁"
                          style="width: 100%; height: 100%; object-fit: contain;">
                 </div>
