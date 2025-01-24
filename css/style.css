@@ -90,6 +90,7 @@ ul {
       }
 }
 #music-animation {
+    margin-top: 3.5px;
     width: 32.5px;
     height: 32.5px;
     cursor: pointer;
@@ -98,6 +99,8 @@ ul {
     display: flex;
 }
 .song-title{
+    font-family: "Noto Serif TC", serif;
+    margin-bottom: 0px;
     color: #fff;
 }
 #progress{
@@ -263,9 +266,8 @@ ul {
 }
 
 .hero .container {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 1rem;
     min-height: 300px;
     z-index: -11;
 }
@@ -274,7 +276,7 @@ ul {
     display: flex;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(to right, #e8dedf, #5e3c3f, #7a5559, #ab8f91);
+    /* background: linear-gradient(to right, #e8dedf, #5e3c3f, #7a5559, #ab8f91); */
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -282,28 +284,30 @@ ul {
     animation: animate-gradient 2.5s linear
         infinite;
 }
-
-.hero-texting {
+.container{
+    display: flex;
+    justify-content: end;
+}
+.hero-texting:nth-child(1){
+    margin-top: 30rem;
+}
+.hero-texting{
+    display: flex;
+    justify-content: end;
     width: 100%;
     max-width: 600px;
-    padding: 1rem;
+    padding: 0;
     padding-top: -100px;
-    margin: 0 auto;
     display: flex;
-    margin-top: 28rem;
-    justify-content: center;
-    align-items: center;
     color: #4A1D21;
     font-size: clamp(2rem, 7vw, 2rem);
     font-weight: 700;
     font-family: Noto Serif TC, serif;  /* 改用文徵明體 */
-    background-color: #d4a9afe6;
-    text-align: center;
     border-radius: 15px;
     position: relative;
 }
 
-.hero-texting::before {
+/* .hero-texting::before {
     content: '';
     position: absolute;
     top: -2px;
@@ -331,7 +335,7 @@ ul {
     background-size: 300%;
     animation: borderRotate 3s linear infinite;
     opacity: 0.5;
-}
+} */
 
 @keyframes borderRotate {
     0% {
@@ -355,7 +359,7 @@ ul {
     max-width: 500px;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     font-size: clamp(1.5rem, 7vw, 1.5rem);
     align-items: center;
     padding-top: 1rem;
@@ -584,7 +588,7 @@ ul {
 .backinfo{
     display: flex;
     justify-content: start;
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
     color: #722;
     font-family: "Noto Serif TC", serif;
@@ -1255,6 +1259,21 @@ ul {
     }
     .search-item{
         display: none !important;
+    }
+  }
+  @media screen and (1150px<width<=1300px){
+    .hero-texting:nth-child(1){
+        margin-top: 25rem;
+    }
+  }
+  @media screen and (1300px<width<=1367px){
+    .carousel .list .item .content .backinfo{
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #753533;
+    }
+    .hero-texting:nth-child(1){
+        margin-top: 30rem;
     }
   }
   @media screen and (768px<=width<=1024px){

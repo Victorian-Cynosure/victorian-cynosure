@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自主學習成發</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chango&family=Potta+One&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a3471e79bc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+</head>
+
+<body>
+    <nav class="navbar bg-yellow" id="nav">
+        <div class="container">
+            <div class="logo">
+                <img src="../victorian-cynosure/images/logo.png" alt="" class="logo-img">
+                <div class="control-music">
+                    <div class="information">
+                        <div class="music-animation" id="music-animation"></div>
+                        <h1>霧都光影</h1>
+                    </div>
+                    <div class="timebar">
+                        <audio id="song">
+                            <source src="../victorian-cynosure/media/Piano cover 3.m4a" type="audio/mpeg">
+                        </audio>
+                        <input type="range" value="0" id="progress">
+                    </div>
+                </div>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="close-icon">
+                <i class='bx bx-menu' id="menu-list"></i>
+                <i class='bx bx-x' id="close-menu" ></i>
+            </label>
+            <div class="main-menu">
+                <ul class="dropdown-container">
+                    <li>
+                       <div class="dropdown">
+                        <a href="index.html#nav" class="dropbtn">首頁</a>
+                            <div class="dropdown-content">
+                                <a href="index.html#background">背景介紹</a>
+                                <a href="index.html#timeline">時程表</a>
+                           </div>
+                       </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="index2.html#nav" class="dropbtn">參展者介紹</a>
+                            <div class="dropdown-content">
+                                <a href="index2.html#perform">報告組名單</a>
+                                <a href="index2.html#stall">攤位組名單</a>
+                                <a href="index2.html#poster">海報組名單</a>
+                                <a href="index2.html#staff">工作人員名單</a>
+                           </div>
+                           </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <a href=" index3.html#nav" class="dropbtn">展覽資訊</a>
+                                <div class="dropdown-content">
+                                    <a href="index3.html#nav">手冊</a>
+                                    <a href="index3.html#teacher" class="">導師的話</a>
+                                <div>
+                        </div>
+                     </li>
+                    <li>
+                        <div id="instagram-animation" class="instagram-animation menu-icon">
+                            <a href="https://www.instagram.com/victorian_cynosure/"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="youtube-animation" class="youtube-animation menu-icon">
+                            <a href="https://www.youtube.com/@VictorianCynosure1851"></a>
+                        </div>
+                    </li>
+                    <li class="search-item">
+                        <div class="search">
+                            <dotlottie-player 
+                                    id="search-icon"
+                                    class="search-icon"
+                                    src="https://lottie.host/35b52ddf-7150-4951-96fa-fb5455745b1e/6UIpiGJVZX.lottie" 
+                                    background="transparent" 
+                                    speed="1">
+                                </dotlottie-player>
+                            <form id="searchForm" action="search.html" method="GET"> <!-- 將搜尋表單指向新的搜尋結果頁面 -->
+                                <input class="search_input" type="text" name="query" placeholder="搜尋..." required>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="lyrics">
+        蒸汽鳴笛喚回霧都的昔年
+        海德公園陳舊的鞦韆
+        青綠草地追逐的畫面
+        混入煤氣往日雲煙
+        青春揮灑一如振翅飛揚
+        翻過爬滿紫丁香的牆
+        開啟我們故事的篇章
+        童年回憶在風中迴盪
+
+        想起了過往的滂薄
+        堅守的承諾
+        填補著寂寞
+
+        那時青春一起攜手同行
+        一路伴隨留清晰身影
+        光之山閃耀模樣
+        是你留守我身旁
+        童年的純真呼喚場景
+        在腦海裡虛實相映
+        不記得任何紛爭
+        只有你和你的純真
+
+        笑聲輕染日不落的童年
+        暖陽是你溫柔的笑顏
+        回憶化作鑽石的耀眼
+        點亮難以回溯昨天
+
+        那時青春一起攜手同行
+        一路伴隨剩模糊身影
+        光之山閃耀模樣
+        是你留守我身旁
+        鐘聲激起泛黃的濾鏡
+        破碎殘影拼湊劇情
+        膠卷留有你笑靨
+        記憶氧化消退 
+
+        水晶清脆的蕩漾
+        闖開迷惘的風浪
+        撞開琉璃抵擋
+        獨自去飛翔 
+
+        我唱著日不落的惆悵
+        晚風飄落五月紫丁香
+        光之山閃耀模樣
+        可你已不在身旁
+        盼望與你重逢在千里
+        美好回憶掀起漣漪
+        淚猛然脫離夢境
+        卻仍能感受你的氣息
+    </div>
+    <script src="javascript/music.js"></script>
+</body>
+</html>
