@@ -1708,12 +1708,12 @@ ul {
     }
     .card img{
         margin-left: 1rem;
-        width: 65% !important;
+        width: 60% !important;
         height:auto !important;
     }
     .teachers-name{
         margin-top: 30px;
-        color: brown;
+        color: black;
         font-weight: 900;
         font-size: 18px !important;
       }
