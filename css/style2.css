@@ -87,6 +87,7 @@ ul {
       }
 }
 #music-animation {
+    margin-top: 3.5px;
     width: 32.5px;
     height: 32.5px;
     cursor: pointer;
@@ -94,6 +95,20 @@ ul {
 .information{
     display: flex;
     color: #ffffff;
+}
+.song-title{
+    font-family: "Noto Serif TC", serif;
+    margin-bottom: 0px;
+    color: #fff;
+}
+.navbar .music-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 0.2rem;
 }
 #progress{
     border: solid 2px #fff;
@@ -754,8 +769,8 @@ ul {
 .item3 .back img {
     display: block;
     border-radius: 10px;
-    width: 645px; /* Adjusted for larger item2 */
-    height: 540px;
+    width: 650px; /* Adjusted for larger item2 */
+    height: 520px;
 }
 
 .item.flipped,
@@ -837,7 +852,7 @@ ul {
     padding: 0 5px;
     white-space: nowrap;
     color: #753533;
-    font-family: 'DFMingW4', serif;
+    font-family: "Noto Serif TC", serif;
     font-size: 1.3rem;
     animation: none;
 }
@@ -1774,7 +1789,52 @@ ul {
     font-weight: bold;
     color: #8c3737;
   }
-  .away {
+.away {
     transform-origin: bottom left;
   }
+.sliderw-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sliderw {
+    overflow: hidden;
+    margin-top: 5rem;
+    width: 80%;
+    height: var(--height);
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.sliderw .listw {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.sliderw .listw .items2 {
+    width: var(--width);
+    height: var(--height) !important;
+    position: absolute;
+    left: 50%;
+    overflow: hidden;
+    animation: Run 20s linear infinite;
+    animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1));
+}
+.sliderw .listw .items2 img {
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+@keyframes Run {
+    from {
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
 

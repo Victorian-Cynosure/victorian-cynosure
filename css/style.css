@@ -131,7 +131,7 @@ ul {
     z-index: 1;
 }
 
-.navbar .container {
+.navbar .music-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -863,15 +863,25 @@ ul {
     background-color: transparent;
     color: #000;
 }
-.swiper-container-wrapper--timeline .swiper-slide {
-  display: flex;
-  min-height: 500px;
-  height: 700px;
-  background-image: url(/victorian-cynosure/images/backpic.jpg);
-  background-size: cover;
-  border-radius: 30px;
+.swiper-container-wrapper--timeline .swiper-slide{
+    display: flex;
+    min-height: 500px;
+    height: 700px;
+    background-size: cover;
+    border-radius: 30px;
+  }
+.swiper-container-wrapper--timeline .swiper-slide:nth-child(4){
+    background-image: url(/victorian-cynosure/images/sliderpic/6767_0.jpg);
+  }
+.swiper-container-wrapper--timeline .swiper-slide:nth-child(3){
+  background-image: url(/victorian-cynosure/images/sliderpic/6751_0.jpg);
 }
-
+.swiper-container-wrapper--timeline .swiper-slide:nth-child(2){
+    background-image: url(/victorian-cynosure/images/sliderpic/1234.jpg);
+  }
+  .swiper-container-wrapper--timeline .swiper-slide:nth-child(1){
+    background-image: url(/victorian-cynosure/images/sliderpic/123.png);
+  }
 .swiper-container-wrapper--timeline .swiper-slide .container {
   width: 100%;
 }
@@ -1060,6 +1070,13 @@ ul {
         margin-left: 0;
         margin-right: auto;
     }
+    .swiper-container-wrapper--timeline .swiper-slide{
+        display: flex;
+        min-height: 300px;
+        height: 700px;
+        background-size: cover;
+        border-radius: 30px;
+      }
     #check:checked~.close-icon #menu-list{
         display: none;
     }
@@ -1101,6 +1118,10 @@ ul {
         width: auto;
         background-color: transparent !important; 
     }
+    .swiper-container-wrapper--timeline .swiper-slide .title {
+        font-size:1rem;
+        margin-top: 1rem;
+      }
     .dropbtn:hover{
         transform: none !important; 
     }
@@ -1178,7 +1199,7 @@ ul {
         margin: 0;
     }
     .carousel .list .item .content{
-        top: 10%;
+        top: 8%;
         padding-right: 0;
     }
     .carousel .list .item .content .title{
@@ -1297,6 +1318,13 @@ ul {
     .hero-texting:nth-child(1){
         margin-top: 30rem;
     }
+  }
+  .container img{
+    width: 500px;
+    height: 350px;
+    border-radius: 15px;
+    margin-top: 7rem;
+    margin-right: 1rem;
   }
   @media screen and (768px<=width<=1024px){
     .logo{
@@ -1484,5 +1512,9 @@ ul {
     }
     .carousel-container{
         overflow: hidden;
+    }
+    .container img{
+        width: 100px;
+        height: auto;
     }
 }
