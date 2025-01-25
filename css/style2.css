@@ -837,6 +837,12 @@ ul {
     overflow: hidden;
     position: relative;
     background-color: transparent;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
 }
 
 .slider2 .list {
@@ -1657,7 +1663,7 @@ ul {
     }
     .card img{
         margin: 0 ;
-        width: 100% !important;
+        width: 90% !important;
         height:auto !important;
     }
     .card-content{
@@ -1674,8 +1680,8 @@ ul {
         color: #8c3737;
       }
       .teachers-name{
-        margin-top: 13px;
-        color: brown;
+        margin-top: 2.5rem;
+        color: black;
         font-weight: 900;
         font-size: 15px !important;
       }
@@ -1723,7 +1729,7 @@ ul {
     }
     .card img{
         margin-left: 1rem;
-        width: 60% !important;
+        width: 50% !important;
         height:auto !important;
     }
     .teachers-name{
@@ -1765,7 +1771,7 @@ ul {
     display: flex;
   }
   .teachers-name{
-    color: brown;
+    color: black;
     font-weight: 900;
     font-size: 20px;
   }
@@ -1816,8 +1822,9 @@ ul {
     position: relative;
 }
 .sliderw .listw .items2 {
+    border-radius: 15px;
     width: var(--width);
-    height: var(--height) !important;
+    height: 300px !important;
     position: absolute;
     left: 50%;
     overflow: hidden;
@@ -1826,6 +1833,7 @@ ul {
 }
 .sliderw .listw .items2 img {
     width: 100%;
+    border-radius: 15px;
     object-fit: contain;
     display: block;
 }
@@ -1837,4 +1845,23 @@ ul {
         left: calc(var(--width) * -1);
     }
 }
-
+.song-cont,.lyrics-cont{
+    width: 60%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 auto;
+}
+.song-cont{
+    margin-top:3rem;
+}
+.song-cont h1{
+    display: flex;
+    color: rgb(84, 18, 18);
+    font-weight: 800;
+}
+.lyrics{
+    font-size: 20px;
+    font-weight: 600;
+    color: #722;
+}

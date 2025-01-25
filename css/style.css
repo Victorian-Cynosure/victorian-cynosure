@@ -866,7 +866,7 @@ ul {
 .swiper-container-wrapper--timeline .swiper-slide{
     display: flex;
     min-height: 500px;
-    height: 700px;
+    height: auto;
     background-size: cover;
     border-radius: 30px;
   }
@@ -1263,6 +1263,9 @@ ul {
     .carousel-container{
         overflow: hidden;
     }
+    .swiper-container-wrapper--timeline .swiper-slide{
+        min-height: 250px;
+      }
 }
 @media screen and (max-width: 1024px) {
     .popup-overlay {
