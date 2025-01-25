@@ -302,7 +302,7 @@ ul {
     color: #4A1D21;
     font-size: clamp(2rem, 7vw, 2rem);
     font-weight: 700;
-    font-family: Noto Serif TC, serif;  /* 改用文徵明體 */
+    font-family: "Noto Serif TC", serif;
     border-radius: 15px;
     position: relative;
 }
@@ -350,7 +350,7 @@ ul {
 }
 
 .date {
-    font-family: "Sour Gummy", sans-serif;
+    font-family: "Noto Serif TC", serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -418,7 +418,7 @@ ul {
 }
 
 .text-xxl {
-    font-family: 'PianPian', serif;  /* 從 "Sour Gummy" 改為 'PianPian' */
+    font-family: "Noto Serif TC", serif;
     font-optical-sizing: auto;
     font-weight: normal;  /* 從 weight 改為 normal */
     font-style: normal;
@@ -885,9 +885,11 @@ ul {
 .swiper-container-wrapper--timeline .swiper-slide .container {
   width: 100%;
 }
-
+.swiper-container-wrapper--timeline .swiper-slide:nth-child(2) .title{
+    left: 0%;
+  }
 .swiper-container-wrapper--timeline .swiper-slide .title {
-  font-family: 'PianPian';
+    font-family: "Noto Serif TC", serif;
   font-size: 18px;
   color:#fff;
   font-size: 3rem;
@@ -905,7 +907,7 @@ ul {
 
 .swiper-container-wrapper--timeline .swiper-pagination-progressbar {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #753533;
   background-color: transparent;
   height: 4px;
