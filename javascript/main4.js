@@ -2,7 +2,7 @@ $(document).ready(function() {
     // 載入書本頁面
     function loadBook() {
         // 這裡假設 book 資料夾中有 page1.html, page2.html 等檔案
-        for (let i = 1; i <= 33; i++) {
+        for (let i = 1; i <= 32; i++) {
             $('#book').append(`
                 <div class="page ${i === 1 ? 'hard' : ''}">
                     <img src="book/自主成發小冊6_page_${i}.jpg" 
