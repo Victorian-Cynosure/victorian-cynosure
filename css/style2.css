@@ -1866,6 +1866,8 @@ ul {
     font-size: 20px;
     font-weight: 600;
     color: #722;
+    line-height: 2;
+    text-align: justify;
 }
 .greoup-name p{
     color: #722;
@@ -1947,5 +1949,93 @@ ul {
     
     .youtube-wrapper {
         margin-bottom: 30px;
+    }
+}
+
+
+.footer-container{
+    width: 100%;
+    padding: 5px 5px 5px;
+    background-color: #4A1D21;
+
+}
+.footer-item{
+    justify-content: center;
+    display: flex;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .song-cont, .lyrics-cont {
+        width: 90%;
+    }
+    
+    .song-cont h1 {
+        font-size: 24px;
+    }
+    
+    .lyrics {
+        font-size: 16px;
+    }
+    
+    .content-wrapper {
+        padding: 10px;
+    }
+    
+    .youtube-container {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .song-cont, .lyrics-cont {
+        width: 90%;
+    }
+    
+    .lyrics {
+        font-size: 18px;
+    }
+    
+    .music-image {
+        width: 80%;
+        margin: 30px auto;
+    }
+    
+    .youtube-container {
+        width: 90%;
+    }
+}
+
+/* 手機樣式 (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .song-cont, .lyrics-cont {
+        width: 95%;
+    }
+    
+    .song-cont {
+        margin-top: 2rem;
+    }
+    
+    .song-cont h1 {
+        font-size: 20px;
+    }
+    
+    .lyrics {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .music-image {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .youtube-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .youtube-wrapper {
+        margin-bottom: 20px;
     }
 }

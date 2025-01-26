@@ -1,6 +1,7 @@
 .lyrics-cont {
     position: relative;
     overflow: hidden;
+    padding: 20px;
 }
 
 .lyrics-cont img {
@@ -15,4 +16,75 @@
 .lyrics {
     margin-right: 220px; /* 確保文本不會被圖片覆蓋 */
     text-align: justify;
+    line-height: 2;
+}
+
+/* 平板樣式 (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .lyrics-cont {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .lyrics {
+        font-size: 18px;
+        margin-right: 0;
+    }
+    
+    .music-image {
+        width: 80%;
+        margin: 30px auto;
+    }
+    
+    .youtube-container {
+        width: 90%;
+    }
+}
+
+/* 手機樣式 (max-width: 767px) */
+@media screen and (max-width: 767px) {
+    .content-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .song-cont {
+        width: 95%;
+        margin-top: 2rem;
+    }
+    
+    .song-cont h1 {
+        font-size: 20px;
+    }
+    
+    .lyrics-cont {
+        width: 95%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    
+    .lyrics {
+        font-size: 12px;
+        margin-right: 0;
+        line-height: 1.5;
+    }
+    
+    .music-image {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .youtube-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .youtube-wrapper {
+        margin-bottom: 20px;
+    }
 }

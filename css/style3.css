@@ -662,3 +662,74 @@ main{
     margin-right: 1rem; /* Space between icons */
     }
 }
+
+.footer-container{
+    width: 100%;
+    padding: 5px 5px 5px;
+    background-color: #4A1D21;
+
+}
+.footer-item{
+    justify-content: center;
+    display: flex;
+    color: #fff;
+}
+
+/* 修改跑馬燈文字樣式 */
+.slider2 .list .items2 span {
+    color: #722;
+    font-family: "Noto Serif TC", serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 1px;  /* 增加字距 */
+}
+
+/* 確保組別名稱樣式一致 */
+.greoup-name p {
+    color: #722;
+    font-family: "Noto Serif TC", serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 統一班級和名字文字樣式 */
+.slider2 .list .items2 span,
+.greoup-name p {
+    font-feature-settings: "palt";
+    -webkit-font-smoothing: antialiased;
+    font-variant-east-asian: traditional;  /* 使用傳統字形 */
+}
+
+/* 添加圖片預載入和優化 */
+.sliderw .listw .items2 img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: contain;
+    display: block;
+    will-change: transform;  /* 優化動畫性能 */
+    backface-visibility: hidden;  /* 優化渲染 */
+    transform: translateZ(0);  /* 開啟硬體加速 */
+}
+
+.sliderw .listw .items2 {
+    border-radius: 15px;
+    width: var(--width);
+    height: 300px !important;
+    position: absolute;
+    left: 50%;
+    overflow: hidden;
+    opacity: 0;  /* 初始設為不可見 */
+    animation: Run 60s linear infinite;
+    animation-delay: calc((60s / var(--quantity)) * (var(--position) - 1));
+    animation-play-state: paused;  /* 初始暫停動畫 */
+}
+
+/* 當圖片載入完成後才開始動畫 */
+.sliderw.loaded .listw .items2 {
+    opacity: 1;
+    animation-play-state: running;
+}

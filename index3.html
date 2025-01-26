@@ -32,6 +32,26 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/jpg" href="/victorian-cynosure/images/logo.png">
+    <script>
+        // 預載入圖片
+        window.addEventListener('load', function() {
+            const images = [
+                '/victorian-cynosure/images/groups/S__4063305_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063309_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063294_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063280_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063277_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063286_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063274_0.jpg',
+                '/victorian-cynosure/images/groups/S__4063276_0.jpg'
+            ];
+            
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -179,7 +199,7 @@
                     </h1>
                     <p>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;物理是一門充滿規律與邏輯的科學，而這些規律不僅適用於物理世界，也能在我們的自主學習的過程中提供指引。
-                        1. 慣性定律（牛頓第一定律）： 慣性定律告訴我們，如果一個物體沒有受外力作用，它將保持靜止或等速直線運動。這對你們的學習有著深刻的啟示。開始學習有時最困難的部分就是啟動，一旦開始，學習會自然而然地進行。因此，要勇於開啟每一個新的學習挑戰，突破初期的“慣性”！
+                        1. 慣性定律（牛頓第一定律）： 慣性定律告訴我們，如果一個物體沒有受外力作用，它將保持靜止或等速直線運動。這對你們的學習有著深刻的啟示。開始學習有時最困難的部分就是啟動，一旦開始，學習會自然而然地進行。因此，要勇於開啟每一個新的學習挑戰，突破初期的"慣性"！
                         2. 加速度與努力（牛頓第二定律）： 牛頓第二定律告訴我們，加速度與物體所受的外力成正比，與物體的質量成反比。對學習來說，這就像是你們付出的努力（外力）與學習的成果（加速度）之間的關係。學習的速度與成效，往往取決於你們願意投入多少努力，而持之以恆的努力會讓你們獲得更大的進步。
                         3. 波動與學習的節奏： 波動現象告訴我們，能量是周期性變化的，這和學習的節奏十分相似。學習並非一蹴而就，而是需要有規律的波動。在學習的過程中，會有起伏，有高峰也有低谷，但只要保持穩定的節奏，持續努力，最終會克服困難，達到學習的頂峰。
                         希望你們能始終保持學習的動力和熱情，勇於挑戰自我，不斷成長。記住：當你們投入心力，掌握了其中的規律，將會發現學習的樂趣與成就感。
@@ -255,6 +275,8 @@
             </div>    
             </div>
         </div>
+
+
         <div class="sliderw-container" id="staff">
             <div class="sliderw" id="worker" style="--width:400px; --height:320.06px; --quantity:8">
                 <div class="listw">
@@ -353,6 +375,13 @@
                     </span>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- 添加 footer -->
+    <div class="footer-container">
+        <div class="footer-item">
+            網站製作人員 &nbsp; &nbsp;&nbsp;&nbsp;資訊組：二戊 蔡睿紘 蘇宥宇 二己 蕭詣軒  &nbsp; &nbsp;&nbsp;&nbsp; 美術組：⼆丙 廖渝婕 ⼆戊 林冠宇 ⼆⼰ 陳亭⾀ 韓昀珊
         </div>
     </div>
     <script src="javascript/main3.js"></script>

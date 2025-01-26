@@ -59,3 +59,15 @@
 #book .turn-page {
     background-color: white;
 } 
+
+.footer-container{
+    width: 100%;
+    padding: 5px 5px 5px;
+    background-color: #4A1D21;
+
+}
+.footer-item{
+    justify-content: center;
+    display: flex;
+    color: #fff;
+}
