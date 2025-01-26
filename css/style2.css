@@ -1871,3 +1871,43 @@ ul {
     color: #722;
     font-family: "Noto Serif TC", serif;
 }
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 40px;
+}
+
+.lyrics-cont {
+    flex: 1;
+}
+
+.music-image {
+    flex: 0 0 400px;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.music-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .music-image {
+        flex: 0 0 auto;
+        position: static;
+        margin: 20px auto;
+        max-width: 300px;
+    }
+}

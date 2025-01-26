@@ -1,0 +1,18 @@
+.lyrics-cont {
+    position: relative;
+    overflow: hidden;
+}
+
+.lyrics-cont img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-left: 20px;
+    width: 200px;
+    height: auto;
+}
+
+.lyrics {
+    margin-right: 220px; /* 確保文本不會被圖片覆蓋 */
+    text-align: justify;
+}
