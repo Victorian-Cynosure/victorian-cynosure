@@ -848,7 +848,7 @@ ul {
     display: flex;
     position: absolute;
     width: max-content;
-    animation: scroll 30s linear infinite;
+    animation: scroll 40s linear infinite;
 }
 
 .slider2 .list .items2 {
@@ -1827,8 +1827,8 @@ ul {
     position: absolute;
     left: 50%;
     overflow: hidden;
-    animation: Run 20s linear infinite;
-    animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1));
+    animation: Run 60s linear infinite;  /* 將時間從 20s 改為 60s */
+    animation-delay: calc((60s / var(--quantity)) * (var(--position) - 1));  /* 這裡也要相應調整 */
 }
 .sliderw .listw .items2 img {
     width: 100%;
@@ -1870,6 +1870,10 @@ ul {
 .greoup-name p{
     color: #722;
     font-family: "Noto Serif TC", serif;
+    font-size: 24px;  /* 增加字體大小 */
+    font-weight: 700;  /* 加粗 */
+    text-align: center;  /* 置中對齊 */
+    padding: 10px 0;  /* 增加上下間距 */
 }
 
 .content-wrapper {
@@ -1909,5 +1913,39 @@ ul {
         position: static;
         margin: 20px auto;
         max-width: 300px;
+    }
+}
+
+.youtube-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.youtube-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 比例 */
+    margin-bottom: 60px;
+}
+
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .youtube-container {
+        margin: 20px auto;
+    }
+    
+    .youtube-wrapper {
+        margin-bottom: 30px;
     }
 }
