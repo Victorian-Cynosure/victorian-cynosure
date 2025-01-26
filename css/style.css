@@ -300,7 +300,6 @@ ul {
     padding-top: -100px;
     display: flex;
     color: #4A1D21;
-    font-size: clamp(2rem, 7vw, 2rem);
     font-weight: 700;
     font-family: "Noto Serif TC", serif;
     border-radius: 15px;
@@ -1065,7 +1064,7 @@ ul {
     cursor: pointer;
     display: none;
   }
-  @media (max-width:767px){
+  @media screen and (width <= 767px) {
     .logo{
         width: 60px;
         height: 60px;
@@ -1095,19 +1094,24 @@ ul {
     .container{
         height: 60px;
     }
-    .hero-texting{
-        display: none !important;
+    .hero-texting:nth-child(1){
+        margin-top: 7.25rem;
+    }
+    .hero-content{
+        margin-right: 1rem;
     }
     .backinfod{
 
         width: 90%;
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
     .backinfo{
         font-size: 15px;
     }
     .date{
-         display: none;
+        padding-top: 0rem;
+        height: auto;
+        width: auto;
     }
     .close-icon{
         display: inline-flex;
@@ -1170,9 +1174,7 @@ ul {
         height: 100px !important;
         width: auto;
     }
-    .hero-texting{
-        font-size: clamp(3rem, 8vw, 4rem);
-    }
+
     .hero .container{
         min-height: 150px;
         padding: 0;
@@ -1191,11 +1193,11 @@ ul {
     margin-right: 1rem; /* Space between icons */
     }
     .date{
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        font-size: clamp(0.8rem, 4vw, 0.8rem);
     }
     .hero-texting{
         margin:0 auto;
-        font-size: clamp(1rem, 7vw, 1rem);
+        font-size: clamp(0.8rem, 4vw, 0.8rem);
     }
     .hero{
         margin: 0;
@@ -1285,7 +1287,7 @@ ul {
         display: none !important;
     }
   }
-  @media screen and (1150px<width<=1300px){
+  @media screen and (1025px<width<=1300px){
     .carousel .list .item .content{
         position: absolute;
         top: 10%;
@@ -1301,6 +1303,11 @@ ul {
     .hero-texting:nth-child(1){
         margin-top: 25rem;
     }
+    .hero-texting{
+        margin:0 auto;
+        font-size: clamp(1.5rem, 9vw, 1.5rem);
+    }
+    
   }
   @media screen and (1300px<width<=1367px){
     .carousel .list .item .content{
@@ -1323,6 +1330,10 @@ ul {
     .hero-texting:nth-child(1){
         margin-top: 30rem;
     }
+    .hero-texting{
+        margin:0 auto;
+        font-size: clamp(2rem, 10vw, 2rem);
+    }
   }
   .container img{
     width: 500px;
@@ -1332,6 +1343,12 @@ ul {
     margin-right: 1rem;
   }
   @media screen and (768px<=width<=1024px){
+    .hero-texting{
+        font-size: clamp(1.5rem, 9vw, 1.5rem);
+    }
+    .hero-texting:nth-child(1){
+        margin-top: 15rem;
+    }
     .logo{
         width: 70px;
         height: 70px;
@@ -1359,12 +1376,6 @@ ul {
     }
     .container{
         height: 60px;
-    }
-    .hero-texting{
-        display: none !important;
-    }
-    .date{
-         display: none;
     }
     .close-icon{
         display: inline-flex;
@@ -1423,9 +1434,7 @@ ul {
         height: 100px !important;
         width: auto;
     }
-    .hero-texting{
-        font-size: clamp(6rem, 8vw, 4rem);
-    }
+
     .hero .container{
         min-height: 150px;
         padding: 0;
@@ -1443,16 +1452,18 @@ ul {
     display: inline-block;
     margin-right: 1rem; /* Space between icons */
     }
+    .hero-content{
+        margin-right: 1rem;
+    }
     .date{
-        font-size: clamp(1rem, 4vw, 1.5rem);
+        padding-top: 0rem;
+        height: auto;
+        font-size: clamp(1rem, 4vw, 1rem);
     }
     .backinfod{
         margin-top:23rem;
     }
-    .hero-texting{
-        margin:0 auto;
-        font-size: clamp(2rem, 10vw, 2rem);
-    }
+
     .carousel .list .item .content{
         top: 10%;
         padding-right: 50px;
@@ -1534,4 +1545,5 @@ ul {
     justify-content: center;
     display: flex;
     color: #fff;
+    font-weight: bold;
 }
