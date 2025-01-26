@@ -304,6 +304,7 @@ ul {
     font-family: "Noto Serif TC", serif;
     border-radius: 15px;
     position: relative;
+    font-size: clamp(2rem, 10vw, 2rem);
 }
 
 /* .hero-texting::before {
