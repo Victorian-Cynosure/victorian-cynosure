@@ -1568,3 +1568,21 @@ ul {
         line-height: 1.6;
     }
 }
+
+.swiper-container-wrapper--timeline .swiper-slide .title.top-left {
+    top: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+.swiper-container-wrapper--timeline .swiper-slide .title.top-right {
+    top: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+.swiper-container-wrapper--timeline .swiper-slide .title.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+}
