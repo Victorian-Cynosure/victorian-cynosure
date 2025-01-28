@@ -478,3 +478,26 @@ function handleScroll() {
   }
   rotateCards();
 }
+
+window.addEventListener('load', function() {
+    const slider = document.querySelector('.sliderw');
+    const images = slider.querySelectorAll('img');
+    let loadedImages = 0;
+
+    images.forEach(img => {
+        if (img.complete) {
+            loadedImages++;
+        } else {
+            img.addEventListener('load', () => {
+                loadedImages++;
+                if (loadedImages === images.length) {
+                    slider.classList.add('loaded');
+                }
+            });
+        }
+    });
+
+    if (loadedImages === images.length) {
+        slider.classList.add('loaded');
+    }
+});
