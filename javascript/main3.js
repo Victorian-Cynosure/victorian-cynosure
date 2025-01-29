@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function () {
   // 載入書本頁面
   function loadBook() {
-      for (let i = 1; i <= 33; i++) {
+      for (let i = 1; i <= 32; i++) {
           $('#book').append(`
               <div class="page ${i === 1 ? 'hard' : ''}">
                   <img src="/victorian-cynosure/book/自主成發小冊6_page_${i}.jpg" 
